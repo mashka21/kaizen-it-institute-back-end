@@ -72,8 +72,8 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Manage Popular Courses</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-plus text-primary"></i><a href="{{route('admin.addPopularCourse')}}">Add Popular Course</a></li>
-                            <li><i class="fa fa-edit text-success"></i><a href="{{route('admin.edithomeslider')}}">Edit Course</a></li>
-                            <li><i class="fa fa-remove text-danger"></i><a href="{{route('admin.deletehomeslider')}}">Delete Course</a></li>
+                            <li><i class="fa fa-edit text-success"></i><a href="{{route('admin.editPopularCourses')}}">Edit Popular Courses</a></li>
+                            <li><i class="fa fa-remove text-danger"></i><a href="{{route('admin.deletePopularCourse')}}">Delete Popular Courses</a></li>
                         </ul>
                     </li>
 

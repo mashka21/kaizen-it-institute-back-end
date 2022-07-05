@@ -102,19 +102,20 @@
               <div class="row mb-5 mt-3 carousel-isotope">
                   <div class="col-12 text-center mb-2">
                       <ul class="list-inline mb-4" id="portfolio-flters">
+                        
                           <li class="courese-isotope sm-3 m-1 active"  data-filter="*">All Courses</li>
-                          <li class="courese-isotope m-1 sm-3" data-filter=".design&multimedia">Design & Multimedia</li>
-                          <li class="courese-isotope m-1 sm-3" data-filter=".web&software">Web & Software</li>
+                          <li class="courese-isotope m-1 sm-3" data-filter=".designmultimedia">Design & Multimedia</li>
+                          <li class="courese-isotope m-1 sm-3" data-filter=".websoftware">Web & Software</li>
                           <li class="courese-isotope m-1 sm-3" data-filter=".degitalmarketing">Degital Marketing</li>
                   </div>
                   <hr>
               </div>
               <div class="row portfolio-container box-container" data-aos="fade-left">
                 <div class="">
-                  @if ($p_courses->course_category ==="design&multimedia")
-                     
+                     {{-- design & multimedia Popular-Courese --}}
                   @foreach ($p_courses as $p_course)
-                   <div class="col-lg-4 col-md-6 mb-4 portfolio-item {{$p_course->course_category}}">
+                  @if($p_course->course_category === "designmultimedia")
+                   <div class="col-lg-4 col-md-6 mb-4 portfolio-item designmultimedia">
                     <a href="">
                        <div class="box">
                           <div class="image">
@@ -146,8 +147,85 @@
                     </a>
                     
                    </div>
-                   @endforeach
                    @endif
+                   @endforeach
+
+                   {{-- Web & Software Populkar course  --}}
+                   @foreach ($p_courses as $p_course)
+                   @if($p_course->course_category === "websoftware")
+                    <div class="col-lg-4 col-md-6 mb-4 portfolio-item websoftware">
+                     <a href="">
+                        <div class="box">
+                           <div class="image">
+                              <img src="{{asset('assets/images/popular_courses')}}/{{$p_course->image}}" alt="">
+                           </div>
+                           <div class="content">
+                              <h3>{{$p_course->course_name}}</h3>
+                              <div class="d-flex">
+                                 <p class="mr-auto">
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star-half-alt"></i></span>
+                                    ({{$p_course->t_n_reviews}}review)
+                                 </p>
+                                 <p class="ml-auto pt-1rem">{{$p_course->t_n_students}} students</p>
+ 
+ 
+                              </div>
+ 
+                              <div class="icons">
+                                 <span> <i class="fas fa-book"></i> {{$p_course->n_modules}} modules </span>
+                                 <span> <span class="text-success font-weight-bold">&#2547;</span> {{$p_course->price}} fee </span>
+                                 <span> <i class="fas fa-clock"></i> {{$p_course->hours}} hours </span>
+                              </div>
+                           </div>
+                        </div>
+                     </a>
+                     
+                    </div>
+                    @endif
+                    @endforeach
+
+                    {{-- degitalmarketing Popular course  --}}
+                    @foreach ($p_courses as $p_course)
+                    @if($p_course->course_category === "degitalmarketing")
+                     <div class="col-lg-4 col-md-6 mb-4 portfolio-item degitalmarketing">
+                      <a href="">
+                         <div class="box">
+                            <div class="image">
+                               <img src="{{asset('assets/images/popular_courses')}}/{{$p_course->image}}" alt="">
+                            </div>
+                            <div class="content">
+                               <h3>{{$p_course->course_name}}</h3>
+                               <div class="d-flex">
+                                  <p class="mr-auto">
+                                     <span><i class="fas fa-star"></i></span>
+                                     <span><i class="fas fa-star"></i></span>
+                                     <span><i class="fas fa-star"></i></span>
+                                     <span><i class="fas fa-star"></i></span>
+                                     <span><i class="fas fa-star-half-alt"></i></span>
+                                     ({{$p_course->t_n_reviews}}review)
+                                  </p>
+                                  <p class="ml-auto pt-1rem">{{$p_course->t_n_students}} students</p>
+  
+  
+                               </div>
+  
+                               <div class="icons">
+                                  <span> <i class="fas fa-book"></i> {{$p_course->n_modules}} modules </span>
+                                  <span> <span class="text-success font-weight-bold">&#2547;</span> {{$p_course->price}} fee </span>
+                                  <span> <i class="fas fa-clock"></i> {{$p_course->hours}} hours </span>
+                               </div>
+                            </div>
+                         </div>
+                      </a>
+                      
+                     </div>
+                     @endif
+                     @endforeach
+
                </div>
              </div>
       </div>

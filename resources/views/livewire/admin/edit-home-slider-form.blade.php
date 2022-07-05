@@ -49,7 +49,7 @@
                         <div class="form-group">
                             <label for="video" class=" form-control-label">Video</label>
                             <p><small class="text-success">Please Upload Only <strong class="text-danger">Video</strong> </small></p>
-                            <input type="file" id="video" class="form-control" wire:model="video">
+                            <input type="file" id="video" class="form-control" wire:model="newvideo">
                             @if ($newvideo)
                                     <img src="{{ $newvideo->temporaryUrl() }}" width="120">
                                 @else
