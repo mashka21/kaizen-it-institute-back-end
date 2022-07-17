@@ -10,245 +10,103 @@
 
     <h1 style="margin-top: 2rem; margin-bottom: 2rem; font-size: 3rem; font-weight: bold;">Design and Multimedia</h1>
     <div class="box-container">
-       <a href="">
-          <div class="box">
-             <div class="image">
-                <img src="{{asset('assets/images/graphic.jpg')}}" alt="">
-             </div>
-             <div class="content">
-                <h3>Professional graphic design</h3>
-                <div class="d-flex">
-                   <p class="mr-auto">
-                      <span><i class="fas fa-star"></i></span>
-                      <span><i class="fas fa-star"></i></span>
-                      <span><i class="fas fa-star"></i></span>
-                      <span><i class="fas fa-star"></i></span>
-                      <span><i class="fas fa-star-half-alt"></i></span>
-
-                   </p>
-                   <span class="float-right mt-3" style="color: gray; font-size:16px;">(312review)</span>
-                </div>
-
-                <div class="icons mr-auto ml-auto">
-                   <span> <span class="text-success font-weight-bold" style="font-weight: bold;">&#2547;</span> 1,200 fee </span>
-                </div>
-             </div>
-          </div>
-       </a>
-
-       <a href="">
-         <div class="box">
-            <div class="image">
-               <img src="{{asset('assets/images/montion.jpg')}}" alt="">
-            </div>
-            <div class="content">
-               <h3>Motion graphic design</h3>
-               <div class="d-flex">
-                  <p class="mr-auto">
-                     <span><i class="fas fa-star"></i></span>
-                     <span><i class="fas fa-star"></i></span>
-                     <span><i class="fas fa-star"></i></span>
-                     <span><i class="fas fa-star"></i></span>
-                     <span><i class="fas fa-star-half-alt"></i></span>
-
-                  </p>
-                  <span class="float-right mt-3" style="color: gray; font-size:16px;">(312review)</span>
+      
+      @foreach ($s_services as $s_service)
+         @if ($s_service->service_category === 'designmultimedia')
+         <a href="">
+            <div class="box">
+               <div class="image">
+                  <img src="{{asset('assets/images/software_services')}}/{{$s_service->s_image}}" alt="">
                </div>
+               <div class="content">
+                  <h3>{{$s_service->s_name}}</h3>
+                  <div class="d-flex">
+                     <p class="mr-auto">
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star-half-alt"></i></span>
 
-               <div class="icons mr-auto ml-auto">
-                  <span> <span class="text-success font-weight-bold" style="font-weight: bold;">&#2547;</span> 1,200 fee </span>
+                     </p>
+                     <span class="float-right mt-3" style="color: gray; font-size:16px;">({{$s_service->s_reviews}})</span>
+                  </div>
+
+                  <div class="icons mr-auto ml-auto">
+                     <span class="text-center"> <span class="text-success font-weight-bold" style="font-weight: bold;">&#2547;</span> {{$s_service->s_price}}</span>
+                  </div>
                </div>
             </div>
-         </div>
-      </a>
-
-      <a href="">
-         <div class="box">
-            <div class="image">
-               <img src="{{asset('assets/images/uiux.jpg" a')}}lt="">
-            </div>
-            <div class="content">
-               <h3>UX / UI design</h3>
-               <div class="d-flex">
-                  <p class="mr-auto">
-                     <span><i class="fas fa-star"></i></span>
-                     <span><i class="fas fa-star"></i></span>
-                     <span><i class="fas fa-star"></i></span>
-                     <span><i class="fas fa-star"></i></span>
-                     <span><i class="fas fa-star-half-alt"></i></span>
-
-                  </p>
-                  <span class="float-right mt-3" style="color: gray; font-size:16px;">(312review)</span>
-               </div>
-
-               <div class="icons mr-auto ml-auto">
-                  <span> <span class="text-success font-weight-bold" style="font-weight: bold;">&#2547;</span> 1,200 fee </span>
-               </div>
-            </div>
-         </div>
-      </a>
-
+         </a>
+         @endif
+       @endforeach
+      
      </div>
      <h1 style="margin-top: 2rem; margin-bottom: 2rem; font-size: 3rem; font-weight: bold;">Web & Software</h1>
      <div class="box-container">
-         <a href="">
-             <div class="box">
-                <div class="image">
-                   <img src="{{asset('assets/images/web.png"')}}" alt="">
-                </div>
-                <div class="content">
-                   <h3>Web development</h3>
-                   <div class="d-flex">
-                      <p class="mr-auto">
-                         <span><i class="fas fa-star"></i></span>
-                         <span><i class="fas fa-star"></i></span>
-                         <span><i class="fas fa-star"></i></span>
-                         <span><i class="fas fa-star"></i></span>
-                         <span><i class="fas fa-star-half-alt"></i></span>
+      @foreach ($s_services as $s_service)
+      @if ($s_service->service_category === 'websoftware')
+      <a href="">
+         <div class="box">
+            <div class="image">
+               <img src="{{asset('assets/images/software_services')}}/{{$s_service->s_image}}" alt="">
+            </div>
+            <div class="content">
+               <h3>{{$s_service->s_name}}</h3>
+               <div class="d-flex">
+                  <p class="mr-auto">
+                     <span><i class="fas fa-star"></i></span>
+                     <span><i class="fas fa-star"></i></span>
+                     <span><i class="fas fa-star"></i></span>
+                     <span><i class="fas fa-star"></i></span>
+                     <span><i class="fas fa-star-half-alt"></i></span>
 
-                      </p>
-                      <span class="float-right mt-3" style="color: gray; font-size:16px;">(312review)</span>
-                   </div>
-
-                   <div class="icons mr-auto ml-auto">
-                      <span> <span class="text-success font-weight-bold" style="font-weight: bold;">&#2547;</span> 1,200 fee </span>
-                   </div>
-                </div>
-             </div>
-          </a>
-
-          <a href="">
-            <div class="box">
-               <div class="image">
-                  <img src="{{asset('assets/images/web.png')}}" alt="">
+                  </p>
+                  <span class="float-right mt-3" style="color: gray; font-size:16px;">({{$s_service->s_reviews}})</span>
                </div>
-               <div class="content">
-                  <h3>App development</h3>
-                  <div class="d-flex">
-                     <p class="mr-auto">
-                        <span><i class="fas fa-star"></i></span>
-                        <span><i class="fas fa-star"></i></span>
-                        <span><i class="fas fa-star"></i></span>
-                        <span><i class="fas fa-star"></i></span>
-                        <span><i class="fas fa-star-half-alt"></i></span>
 
-                     </p>
-                     <span class="float-right mt-3" style="color: gray; font-size:16px;">(312review)</span>
-                  </div>
-
-                  <div class="icons mr-auto ml-auto">
-                     <span> <span class="text-success font-weight-bold" style="font-weight: bold;">&#2547;</span> 1,200 fee </span>
-                  </div>
+               <div class="icons mr-auto ml-auto">
+                  <span class="text-center">  <span class="text-success font-weight-bold" style="font-weight: bold;">&#2547;</span> {{$s_service->s_price}}</span>
                </div>
             </div>
-         </a>
+         </div>
+      </a>
+      @endif
+    @endforeach
 
-         <a href="">
-            <div class="box">
-               <div class="image">
-                  <img src="{{asset('assets/images/software-testing.png')}}" alt="">
-               </div>
-               <div class="content">
-                  <h3>Software Testing</h3>
-                  <div class="d-flex">
-                     <p class="mr-auto">
-                        <span><i class="fas fa-star"></i></span>
-                        <span><i class="fas fa-star"></i></span>
-                        <span><i class="fas fa-star"></i></span>
-                        <span><i class="fas fa-star"></i></span>
-                        <span><i class="fas fa-star-half-alt"></i></span>
-
-                     </p>
-                     <span class="float-right mt-3" style="color: gray; font-size:16px;">(312review)</span>
-                  </div>
-
-                  <div class="icons mr-auto ml-auto">
-                     <span> <span class="text-success font-weight-bold" style="font-weight: bold;">&#2547;</span> 1,200 fee </span>
-                  </div>
-               </div>
-            </div>
-         </a>
 
      </div>
      <h1 style="margin-top: 2rem; margin-bottom: 2rem; font-size: 3rem; font-weight: bold;">Degital Marketing</h1>
      <div class="box-container">
-         <a href="">
-             <div class="box">
-                <div class="image">
-                   <img src="{{asset('assets/images/digital.jpg')}}" alt="">
-                </div>
-                <div class="content">
-                   <h3>Degital Marketing</h3>
-                   <div class="d-flex">
-                      <p class="mr-auto">
-                         <span><i class="fas fa-star"></i></span>
-                         <span><i class="fas fa-star"></i></span>
-                         <span><i class="fas fa-star"></i></span>
-                         <span><i class="fas fa-star"></i></span>
-                         <span><i class="fas fa-star-half-alt"></i></span>
+      @foreach ($s_services as $s_service)
+      @if ($s_service->service_category === 'degitalmarketing')
+      <a href="">
+         <div class="box">
+            <div class="image">
+               <img src="{{asset('assets/images/software_services')}}/{{$s_service->s_image}}" alt="">
+            </div>
+            <div class="content">
+               <h3>{{$s_service->s_name}}</h3>
+               <div class="d-flex">
+                  <p class="mr-auto">
+                     <span><i class="fas fa-star"></i></span>
+                     <span><i class="fas fa-star"></i></span>
+                     <span><i class="fas fa-star"></i></span>
+                     <span><i class="fas fa-star"></i></span>
+                     <span><i class="fas fa-star-half-alt"></i></span>
 
-                      </p>
-                      <span class="float-right mt-3" style="color: gray; font-size:16px;">(312review)</span>
-                   </div>
-
-                   <div class="icons mr-auto ml-auto">
-                      <span> <span class="text-success font-weight-bold" style="font-weight: bold;">&#2547;</span> 1,200 fee </span>
-                   </div>
-                </div>
-             </div>
-          </a>
-
-          <a href="">
-            <div class="box">
-               <div class="image">
-                  <img src="{{asset('assets/images/social.jpg')}}" alt="">
+                  </p>
+                  <span class="float-right mt-3" style="color: gray; font-size:16px;">({{$s_service->s_reviews}})</span>
                </div>
-               <div class="content">
-                  <h3>Social media marketing</h3>
-                  <div class="d-flex">
-                     <p class="mr-auto">
-                        <span><i class="fas fa-star"></i></span>
-                        <span><i class="fas fa-star"></i></span>
-                        <span><i class="fas fa-star"></i></span>
-                        <span><i class="fas fa-star"></i></span>
-                        <span><i class="fas fa-star-half-alt"></i></span>
 
-                     </p>
-                     <span class="float-right mt-3" style="color: gray; font-size:16px;">(312review)</span>
-                  </div>
-
-                  <div class="icons mr-auto ml-auto">
-                     <span> <span class="text-success font-weight-bold" style="font-weight: bold;">&#2547;</span> 1,200 fee </span>
-                  </div>
+               <div class="icons mr-auto ml-auto">
+                  <span> <span class="text-success font-weight-bold" style="font-weight: bold;">&#2547;</span> {{$s_service->s_price}}</span>
                </div>
             </div>
-         </a>
-
-         <a href="">
-            <div class="box">
-               <div class="image">
-                  <img src="{{asset('assets/images/google.jpg')}}" alt="">
-               </div>
-               <div class="content">
-                  <h3>Google Adsense</h3>
-                  <div class="d-flex">
-                     <p class="mr-auto">
-                        <span><i class="fas fa-star"></i></span>
-                        <span><i class="fas fa-star"></i></span>
-                        <span><i class="fas fa-star"></i></span>
-                        <span><i class="fas fa-star"></i></span>
-                        <span><i class="fas fa-star-half-alt"></i></span>
-
-                     </p>
-                     <span class="float-right mt-3" style="color: gray; font-size:16px;">(312review)</span>
-                  </div>
-
-                  <div class="icons mr-auto ml-auto">
-                     <span> <span class="text-success font-weight-bold" style="font-weight: bold;">&#2547;</span> 1,200 fee </span>
-                  </div>
-               </div>
-            </div>
-         </a>
+         </div>
+      </a>
+      @endif
+    @endforeach
 
        </div>
 

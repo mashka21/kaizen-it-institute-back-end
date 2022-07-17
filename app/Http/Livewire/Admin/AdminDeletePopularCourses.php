@@ -4,15 +4,12 @@ namespace App\Http\Livewire\Admin;
 
 use Livewire\Component;
 use App\Models\PopularCourses;
-use Livewire\WithPagination;
 class AdminDeletePopularCourses extends Component
 {
-    use WithPagination;
-
     public function deleteCourse($id){
         $p_course = PopularCourses::find($id);
         $p_course->delete();
-        session()->flush('message','One Course has been deleted successfully');
+        session()->flash('message','One Course has been deleted successfully');
     }
     public function render()
     {

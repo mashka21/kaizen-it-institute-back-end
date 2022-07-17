@@ -100,7 +100,9 @@ section {
   text-decoration: none !important;
 }
 .header-nav{
-  background: #55f4af !important;
+  /* background: #55f4af !important; */
+  background: green !important;
+  color: #fff !important;
 }
 
 
@@ -333,7 +335,7 @@ section {
   padding: 0;
 }
 .home-hero{
-  background-image: url('/images/heading-bg.jpg') !important;
+  background-image: url('/assets/images/heading-bg.jpg') !important;
   background-repeat: no-repeat;
   padding: 40px;
 }
@@ -1244,6 +1246,7 @@ section {
 .courese-isotope{
  display: inline !important; 
  font-size: 20px;
+ font-weight: bold;
  padding-right: 20px;
  margin-bottom: 20px;
 }
@@ -1407,8 +1410,7 @@ section {
    .courese-isotope.active{
      color: red;
      border-bottom: none !important;
-     padding-bottom: 21px;
-     padding-left: 20px;
+     padding-left: 0 !important;
    }
 
    /* free semianrs  */
@@ -1450,6 +1452,10 @@ section {
       grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 2rem;
 }
+#portfolio-flters{
+  width: 130%;
+  margin-left: 0 !important;
+}
 
 }
 
@@ -1465,6 +1471,7 @@ section {
    .courese-isotope.active{
      color: red;
      border-bottom: none;
+     padding-left: 0 !important;
    }
    .courses .box-container {
     display: -ms-grid;
@@ -1505,6 +1512,11 @@ section {
 }
 .practocal-projects-content{
   margin-right: 50px !important;
+}
+/* popular courses links  */
+#portfolio-flters{
+  width: 130%;
+  margin-left: 0 !important;
 }
 
 }
@@ -1710,4 +1722,53 @@ section {
   }
 }
 
+
+/* popular courses links  */
+#portfolio-flters{
+  width: 130%;
+  margin-left: -110px;
+}
+
+/* about iostope content styling  */
+
+.about-iosotope-header{
+  margin-left: -70px !important;
+  font-weight: bold !important;
+}
+.about-iosotope-content{
+  display: flex !important;
+  padding: 30px !important;
+   margin-left: -110px !important;
+   font-size: 20px !important;
+   line-height: 1.8 !important;
+}
+
+@media (max-width: 768px) {
+
+  .about-iosotope-header{
+    margin-left: 0 !important;
+  }
+  .about-iosotope-content{
+     margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 450px) {
+  .about-iosotope-header{
+    margin-left: 0 !important;
+  }
+  .about-iosotope-content{
+     margin-left: 0 !important;
+  }
+}
+
+/* partners  */
+.partner{
+  border:3px solid rgb(240, 237, 237); 
+  padding:10px;
+}
+#whyUs-flters{
+  width: 130%;
+  margin-left: -110px;
+}
 /*# sourceMappingURL=style.css.map */

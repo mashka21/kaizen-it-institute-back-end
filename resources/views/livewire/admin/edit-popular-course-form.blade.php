@@ -69,6 +69,7 @@
                                   <option value="designmultimedia">Design & multimedia</option>
                                   <option value="websoftware">web & software</option>
                                   <option value="degitalmarketing">Degital marketing</option>
+                                  <option value="Networking">Networking</option>
                             </select>
                             @error('course_category')<span class="text-danger">{{$message}}</span> @enderror
                         </div>

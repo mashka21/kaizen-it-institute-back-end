@@ -69,11 +69,63 @@
                     </li>
 
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Manage Popular Courses</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Manage Courses</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-plus text-primary"></i><a href="{{route('admin.addPopularCourse')}}">Add Popular Course</a></li>
-                            <li><i class="fa fa-edit text-success"></i><a href="{{route('admin.editPopularCourses')}}">Edit Popular Courses</a></li>
-                            <li><i class="fa fa-remove text-danger"></i><a href="{{route('admin.deletePopularCourse')}}">Delete Popular Courses</a></li>
+                            <li><i class="fa fa-plus text-primary"></i><a href="{{route('admin.addPopularCourse')}}">Add Course</a></li>
+                            <li><i class="fa fa-edit text-success"></i><a href="{{route('admin.editPopularCourses')}}">Edit Courses</a></li>
+                            <li><i class="fa fa-remove text-danger"></i><a href="{{route('admin.deletePopularCourse')}}">Delete Courses</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Manage Comments</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-plus text-primary"></i><a href="{{route('admin.addcomments')}}">Add Comment</a></li>
+                            <li><i class="fa fa-edit text-success"></i><a href="{{route('admin.editcomments')}}">Edit Comment</a></li>
+                            <li><i class="fa fa-remove text-danger"></i><a href="{{route('admin.deletecomment')}}">Delete Comment</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Manage Free Semiars</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-table text-success"></i><a href="{{route('admin.managefreeseminars')}}">Manage Free Seminars</a></li>
+                            <li><i class="fa fa-plus text-primary"></i><a href="{{route('admin.addfreeseminar')}}">Add Free Seminar</a></li>
+                        </ul>
+                    </li>
+
+                    <h3 class="menu-title text-success">Admin Success Story Page</h3>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Manage Success Stories</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-table text-success"></i><a href="{{route('admin.managesuccessstory')}}">Manage Success Story</a></li>
+                            <li><i class="fa fa-plus text-primary"></i><a href="{{route('admin.addsuccessstory')}}">Add Success Story</a></li>
+                        </ul>
+                    </li>
+
+                    <h3 class="menu-title text-success">Admin Sofware Services Page</h3>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Manage Software Service</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-table text-success"></i><a href="{{route('admin.manageSoftwareServices')}}">Manage Software Service</a></li>
+                            <li><i class="fa fa-plus text-primary"></i><a href="{{route('admin.addSoftware')}}">Add Software Service</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="{{route('admin.settings')}}"> <i class="menu-icon ti-settings fa fa-dashboard"></i>Settings </a>
+                    </li>
+
+                    <li>
+                        <a href="{{route('admin.managecontacts')}}"> <i class="menu-icon fa fa-users"></i>Contacts </a>
+                    </li>
+
+                    <h3 class="menu-title text-success">Admin Manage Partners</h3>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Manage Parnters</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-table text-success"></i><a href="{{route('admin.managepartners')}}">Manage Partenrs</a></li>
+                            <li><i class="fa fa-plus text-primary"></i><a href="{{route('admin.addPartners')}}">Add Partner</a></li>
                         </ul>
                     </li>
 

@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('popular_courses', function (Blueprint $table) {
             $table->id();
-            $table->enum('course_category',['designmultimedia','websoftware','degitalmarketing']);
+            $table->enum('course_category',['designmultimedia','websoftware','degitalmarketing','Networking']);
             $table->string('course_name')->nullable();
             $table->string('t_n_reviews')->nullable();
             $table->string('t_n_students')->nullable();

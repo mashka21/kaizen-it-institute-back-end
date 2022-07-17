@@ -35,8 +35,12 @@
 
 <!-- header section starts  -->
 <div class="header-nav p-3">
-  <a href="" class="top-header"><span class="text-dark ml-5" style="font-size: 12px;"> <i class="fas fa-phone"></i> +8801730931984</span></a>
-  <a href="" class="top-header"><span class="text-dark ml-5" style="font-size: 12px;"> <i class="fas fa-envelope"></i> info@kaizenitbd.com</span></a>
+   <?php
+      use App\Models\Setting;
+      $settings = Setting::find(1);
+      ?>
+  <a href="" class="top-header"><span class="text-light ml-5" style="font-size: 12px;"> <i class="fas fa-phone"></i> @if($settings) {{$settings->phone}} @else +8801934-453979 @endif </span></a>
+  <a href="" class="top-header"><span class="text-light ml-5" style="font-size: 12px;"> <i class="fas fa-envelope"></i> @if($settings) {{$settings->email}} @else info@kaizenitbd.com @endif</span></a>
 </div>
 
 <header class="header" id="header">
@@ -46,16 +50,16 @@
 
    <nav class="navbar" id="nav">
       <div id="close-navbar" class="fas fa-times"></div>
-      <a href="/" class="active">Home</a>
-      <a href="about">about us</a>
-      <a href="software-services">software service</a>
-      <a href="freelancing">Freelancing</a>
-      <a href="freelancing">Our Team</a>
-      <a href="success-story">success story</a>
-      <a href="contact">contact</a>
-      <a href="courses" class="btn btn-success courses-btn"><i class="fas fa-book"></i> courses <i class="fas fa-chevron-down"></i></a>
+      <a href="/" class="{{ request()->is('*/*') ? 'active' : '' }}">Home</a>
+      <a href="about" class="{{ request()->is('*about*') ? 'active' : '' }}">about us</a>
+      <a href="software-services" class="{{ request()->is('*software-services*') ? 'active' : '' }}">software service</a>
+      <a href="freelancing" class="{{ request()->is('*freelancing*') ? 'active' : '' }}">Freelancing</a>
+      <a href="freelancing" >Our Team</a>
+      <a href="success-story" class="{{ request()->is('*success-story*') ? 'active' : '' }}">success story</a>
+      <a href="contact"  class="{{ request()->is('*contact*') ? 'active' : '' }}">contact</a>
+      <a href="courses" class="btn btn-success courses-btn {{ request()->is('*courses*') ? 'active' : '' }}"><i class="fas fa-book"></i> courses <i class="fas fa-chevron-down"></i></a>
 
-      {{-- Authenticating user and admin doe accessing their menu  --}}
+      {{-- Authenticating user and admin for accessing their menu  --}}
 
       @if (Route::has('login'))
       @auth
@@ -119,75 +123,7 @@
 
 
 
-<!-- footer section starts  -->
-
-<section class="footer">
-
-   <!-- admission going courese  -->
-<section id="home-admission-going" class="courses">
-   <div class="text-center" data-aos="fade-down">
-      <h1 class="display-3 mb-3" style="font-weight: bold;">Admission to all courses is ongoing</h1>
-      <p class="mb-5">It is not too late to make a career decision. Get enrolled in any course online or offline at your convenience now.</p>
-      <div class="text-center ml-5 mb-5">
-         <button class="btn btn-success float-left ml-5">Join Free Seminar</button>
-         <button class="btn btn-success">Browse Courses</button>
-      </div>
-   </div>
-</section>
-   <div class="box-container">
-
-      <div class="box" data-aos="fade-right">
-         <h3> Contact Us </h3>
-          <b style="font-size: 14px;">Head Office:</b>
-         <p class="mb-3"><i class="fas fa-map-pin text-success"></i> 2nd Floor, Signal, 151/6, Gazi Tower Panthapath, Dhaka 1205</p>
-         <p>
-            <i class="fas fa-phone text-success"></i>
-            01934-453979 <br>
-            01934-453979 <br>
-            01934-453979 <br>
-
-         </p>
-         <p>
-            <i class="fas fa-envelope text-success"></i>
-            info@kaizenitbd.com
-
-         </p>
-         <div class="share">
-            <a href="#" class="fab fa-facebook-f"></a>
-            <a href="#" class="fab fa-twitter"></a>
-            <a href="#" class="fab fa-instagram"></a>
-            <a href="#" class="fab fa-linkedin"></a>
-         </div>
-      </div>
-
-      <div class="box" data-aos="fade-down">
-         <h3>quick links</h3>
-         <a href="home.html" class="link">home</a>
-         <a href="about.html" class="link">about</a>
-         <a href="courses.html" class="link">courses</a>
-         <a href="contact.html" class="link">contact</a>
-      </div>
-
-      <div class="box" data-aos="fade-left">
-         <h3>useful links</h3>
-         <a href="#" class="link">help center</a>
-         <a href="#" class="link">ask questions</a>
-         <a href="#" class="link">send feedback</a>
-         <a href="#" class="link">private policy</a>
-         <a href="#" class="link">terms of use</a>
-      </div>
-
-   </div>
-
-   <div class="credit"> Copyright &copy;2022 Kaizen IT institue. All rights reserved | <span>Kaizen it</span></div>
-   <a href="#header" class="text-success p-5 scroll-to-top" style="position:fixed; bottom:0; right:0;">
-      <i class="fas fa-chevron-up fa-4x"></i>
-   </a>
-</section>
-
-<!-- footer section ends -->
-
-
+@livewire('footer-component')
 
 
 
@@ -207,12 +143,12 @@
 
 <!-- aos animaion  -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<!-- custom js file link  -->
-<script src="{{asset('assets/js/script.js')}}"></script>
+
 <!-- counter-up -->
 <script src="{{asset('assets/js/jquery.counterup.min.js')}}"></script>
 <script src="{{asset('assets/js/jquery.waypoints.js')}}"></script>
-
+<!-- custom js file link  -->
+<script src="{{asset('assets/js/script.js')}}"></script>
 {{-- aos animation  --}}
 <script>
   AOS.init();
@@ -267,20 +203,20 @@
 </script>
 
 
-
-
-<!-- back to top bottom  -->
+{{-- about page isotope  --}}
 <script>
-  $(document).ready(function(){
-        var scrollLink = $(".scroll-to-top");
 
-        scrollLink.click(function(e){
-            e.preventDefault();
-            $("body, html").animate({
-                scrollTop: $(this.hash).offset().top
-            },2000)
-        });
-    });
+   var whyUsIsotope = $('.whyUs-container').isotope({
+       itemSelector: '.whyUs-item',
+       filter: '.expertteachers',
+       layoutMode: 'fitRows'
+   });
+   $('#whyUs-flters li').on('click', function () {
+       $("#whyUs-flters li").removeClass('active');
+       $(this).addClass('active');
+
+       whyUsIsotope.isotope({filter: $(this).data('filter')});
+   });
 </script>
 
 @livewireScripts

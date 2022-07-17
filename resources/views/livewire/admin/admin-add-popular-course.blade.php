@@ -69,6 +69,7 @@
                                   <option value="designmultimedia">Design & multimedia</option>
                                   <option value="websoftware">web & software</option>
                                   <option value="degitalmarketing">Degital marketing</option>
+                                  <option value="Networking">Networking</option>
                             </select>
                             @error('course_category')<span class="text-danger">{{$message}}</span> @enderror
                         </div>
@@ -76,6 +77,10 @@
                         <div class="form-group">
                             <label for="image" class=" form-control-label">Course Image</label>
                             <input type="file" id="image" class="form-control" wire:model="image">
+                            <div wire:loading wire:target="image">Uploading...</div>
+                            @if ($image)
+                                <img src="{{ $image->temporaryUrl() }}" width="120">
+                            @endif
                             @error('image')<span class="text-danger">{{$message}}</span> @enderror
                         </div>
         

@@ -61,6 +61,10 @@
                             <label for="video" class=" form-control-label">Video</label>
                             <p><small class="text-success">Please Upload Only <strong class="text-danger">Video</strong> </small></p>
                             <input type="file" id="video" class="form-control" wire:model="video">
+                            <div wire:loading wire:target="video">Uploading...</div>
+                            @if ($video)
+                                <img src="{{ $video->temporaryUrl() }}" width="120">
+                            @endif
                             @error('video')<span class="text-danger">{{$message}}</span> @enderror
                         </div>
 

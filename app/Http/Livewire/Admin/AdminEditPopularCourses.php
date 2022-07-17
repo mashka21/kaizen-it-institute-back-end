@@ -7,7 +7,6 @@ use Livewire\Component;
 use Livewire\WithPagination;
 class AdminEditPopularCourses extends Component
 {
-    use WithPagination;
     public function render()
     {
         $p_courses = PopularCourses::paginate(10);

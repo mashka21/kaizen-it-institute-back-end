@@ -1,3 +1,4 @@
+<div>
 <section class="heading-link">
     <h3>contact us</h3>
     <p> <a href="/">home</a> / contact </p>
@@ -7,56 +8,75 @@
 
  <section class="contact">
 
-    <h1 class="heading"> get in touch </h1>
+   <h1 class="heading"> Get In Touch</h1>
 
-    <div class="icons-container">
+   <div class="icons-container">
 
-       <div class="icons">
-          <i class="fas fa-clock"></i>
-          <h3>opening hours :</h3>
-          <p>9:000am to 7:00pm</p>
-       </div>
+      <div class="icons">
+         <i class="fas fa-clock"></i>
+         <h3>opening hours :</h3>
+         <p>9:000am to 7:00pm</p>
+      </div>
 
-       <div class="icons">
-          <i class="fas fa-phone"></i>
-          <h3>phone :</h3>
-          <p> +8801934453979</p>
-          <p> +8801965501219</p>
-       </div>
+      <div class="icons">
+         <i class="fas fa-phone"></i>
+         <h3>phone :</h3>
+         @if ($settings)
+            <p> {{$settings->phone}}</p>
+            <p> {{$settings->phone2}}</p>
+         @else
+            <p> +8801934453979</p>
+            <p> +8801965501219</p>
+         @endif
+      </div>
 
-       <div class="icons">
-          <i class="fas fa-envelope"></i>
-          <h3> email : </h3>
-          <p>info@kaizenitbd.com</p>
-          <p>info@kaizenitbd.com</p>
-       </div>
+      <div class="icons">
+         <i class="fas fa-envelope"></i>
+         <h3> email : </h3>
+         @if ($settings)
+         <p> {{$settings->email}}</p>
+      @else
+         <p>info@kaizenitbd.com</p>
+      @endif
+      </div>
 
-       <div class="icons">
-          <i class="fas fa-map"></i>
-          <h3>address :</h3>
-          <p>151/6, 2nd floor, Gazi Tower, Panthapath Dhaka-1205</p>
-       </div>
+      <div class="icons">
+         <i class="fas fa-map"></i>
+         <h3>address :</h3>
+         @if ($settings)
+         <p> {{$settings->address}}</p>
+      @else
+        <p>151/6, 2nd floor, Gazi Tower, Panthapath Dhaka-1205</p>
+      @endif
+      </div>
 
-    </div>
+   </div>
+   <div class="row">
 
-    <div class="row">
+      <div class="image">
+         <img src="{{asset('assets/images/contact-img.png')}}" alt="">
+      </div>
 
-       <div class="image">
-          <img src="{{asset('assets/images/contact-img.png')}}" alt="">
-       </div>
+      <form   wire:submit.prevent="ContactUs">
+         @if (Session::has('message'))
+           <div class="alert alert-success" role="alert">{{Session::get('message')}}</div>
+         @endif
+         <h3>send us a message</h3>
+         <input type="text" placeholder="name" class="box"  wire:model="name">
+         @error('name') <span class="text-danger">{{$message}}</span> @enderror
+         <input type="text" placeholder="email" class="box" wire:model="email">
+         @error('email') <span class="text-danger">{{$message}}</span> @enderror
+         <input type="text" placeholder="phone" class="box" wire:model="phone">
+         @error('phone') <span class="text-danger">{{$message}}</span> @enderror
+         <textarea class="box" placeholder="message" wire:model="comment" id="" cols="30" rows="10"></textarea>
+         @error('comment') <span class="text-danger">{{$message}}</span> @enderror
+         <input type="submit" class="btn" value="Submit" >
+      </form>
+   
+   </div>
+   
 
-       <form action="">
-          <h3>send us a message</h3>
-          <input type="text" placeholder="name" class="box">
-          <input type="email" placeholder="email" class="box">
-          <input type="number" placeholder="phone" class="box">
-          <textarea name="" class="box" placeholder="message" id="" cols="30" rows="10"></textarea>
-          <input type="submit" value="send message" class="btn">
-       </form>
-
-    </div>
-
- </section>
+</section>
 
  <!-- contact section ends -->
 
@@ -136,16 +156,18 @@
 
  <!-- logo slider starts  -->
 
- <section class="logo-container">
-    <div class="swiper logo-slider">
-       <div class="swiper-wrapper">
-          <div class="swiper-slide"> <img src="{{asset('assets/images/0-1.png')}}" alt=""> </div>
-          <div class="swiper-slide"> <img src="{{asset('assets/images/2.png')}}" alt=""> </div>
-          <div class="swiper-slide"> <img src="{{asset('assets/images/3.png')}}" alt=""> </div>
-          <div class="swiper-slide"> <img src="{{asset('assets/images/42.png')}}" alt=""> </div>
-          <div class="swiper-slide"> <img src="{{asset('assets/images/18.png')}}" alt=""> </div>
-       </div>
-    </div>
- </section>
+{{-- our parteners  --}}
 
- <!-- logo slider ends -->
+<section class="logo-container">
+   <h1 class="heading"> OUR PARTNERS</h1>
+   <div class="swiper logo-slider">
+      <div class="swiper-wrapper">
+         @foreach ($partners as $partner)
+            <div class="swiper-slide"> <img src="{{asset('assets/images/Partner')}}/{{$partner->image}}" alt="" class="partner"> </div>
+         @endforeach
+         
+      </div>
+   </div>
+</section>
+
+</div>

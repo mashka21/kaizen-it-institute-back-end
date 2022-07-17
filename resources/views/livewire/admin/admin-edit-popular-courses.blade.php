@@ -1,3 +1,12 @@
+<style>
+    nav svg {
+        height: 20px;
+    }
+    svg {
+        overflow: hidden;
+        vertical-align: middle;
+    }
+</style>
 <div class="content mt-3">
     <div class="animated fadeIn">
         <div class="row">
@@ -40,6 +49,7 @@
                                 
                             </tbody>
                         </table>
+                        {{$p_courses->links()}}
                     </div>
                 </div>
             </div>

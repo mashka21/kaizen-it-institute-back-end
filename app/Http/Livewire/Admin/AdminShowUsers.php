@@ -7,7 +7,6 @@ use Livewire\Component;
 use Livewire\WithPagination;
 class AdminShowUsers extends Component
 {
-    use WithPagination;
     public function render()
     {
         $users = User::paginate(10);

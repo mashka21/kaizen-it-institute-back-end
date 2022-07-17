@@ -12,333 +12,197 @@
             </p>
 
             <div class="row">
-                <div class="col-md-6" style="margin-top: 50px !important;">
-                    <!-- 16:9 aspect ratio -->
-                       <div class="embed-responsive embed-responsive-16by9 header-video" data-aos="fade-right" style="border-radius: 20px;">
-                        <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fkaizenitltd%2Fvideos%2F4847226225331584%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                       </div>
-                 </div>
-                 <div class="col-md-6" style="margin-top: 50px !important;">
-                    <!-- 16:9 aspect ratio -->
-                       <div class="embed-responsive embed-responsive-16by9 header-video" data-aos="fade-left" style="border-radius: 20px;">
-                        <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fkaizenitltd%2Fvideos%2F1589994244693192%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                       </div>
-                 </div>
+               @foreach ($s_stories as $s_story)
+                  <div class="col-md-6" style="margin-top: 50px !important;">
+                     <!-- 16:9 aspect ratio -->
+                        <div class="embed-responsive embed-responsive-16by9 header-video" data-aos="fade-right" style="border-radius: 20px;">
+                           <iframe src="{{asset('assets/images/SuccessStories')}}/{{$s_story->video}}" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                        </div>
+                  </div>
+                 @endforeach
             </div>
-
-            <div class="row">
-                <div class="col-md-6" style="margin-top: 50px !important;">
-                    <!-- 16:9 aspect ratio -->
-                       <div class="embed-responsive embed-responsive-16by9 header-video" data-aos="fade-right" style="border-radius: 20px;">
-                        <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fkaizenitltd%2Fvideos%2F476645560516970%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                       </div>
-                 </div>
-                 <div class="col-md-6" style="margin-top: 50px !important;">
-                    <!-- 16:9 aspect ratio -->
-                       <div class="embed-responsive embed-responsive-16by9 header-video" data-aos="fade-left" style="border-radius: 20px;">
-                        <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fkaizenitltd%2Fvideos%2F461961172240234%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                       </div>
-                 </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-6" style="margin-top: 50px !important;">
-                    <!-- 16:9 aspect ratio -->
-                       <div class="embed-responsive embed-responsive-16by9 header-video" data-aos="fade-right" style="border-radius: 20px;">
-                        <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fkaizenitltd%2Fvideos%2F924223714939525%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                       </div>
-                 </div>
-                 <div class="col-md-6" style="margin-top: 50px !important;">
-                    <!-- 16:9 aspect ratio -->
-                       <div class="embed-responsive embed-responsive-16by9 header-video" data-aos="fade-left" style="border-radius: 20px;">
-                        <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fkaizenitltd%2Fvideos%2F329029615901620%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                       </div>
-                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6" style="margin-top: 50px !important;">
-                    <!-- 16:9 aspect ratio -->
-                       <div class="embed-responsive embed-responsive-16by9 header-video" data-aos="fade-right" style="border-radius: 20px;">
-                        <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fkaizenitltd%2Fvideos%2F963117420958179%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                       </div>
-                 </div>
-                 <div class="col-md-6" style="margin-top: 50px !important;">
-                    <!-- 16:9 aspect ratio -->
-                       <div class="embed-responsive embed-responsive-16by9 header-video" data-aos="fade-left" style="border-radius: 20px;">
-                        <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fkaizenitltd%2Fvideos%2F1159583848213217%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                       </div>
-                 </div>
-            </div>
-
-          <div class="row">
-            <div class="col-md-6" style="margin-top: 50px !important;">
-                <!-- 16:9 aspect ratio -->
-                   <div class="embed-responsive embed-responsive-16by9 header-video" data-aos="fade-right" style="border-radius: 20px;">
-                    <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fkaizenitltd%2Fvideos%2F1734440826901866%2F&show_text=false&width=476&t=0" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                   </div>
-             </div>
-             <div class="col-md-6" style="margin-top: 50px !important;">
-                <!-- 16:9 aspect ratio -->
-                   <div class="embed-responsive embed-responsive-16by9 header-video" data-aos="fade-left" style="border-radius: 20px;">
-                    <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fkaizenitltd%2Fvideos%2F402411395156018%2F&show_text=false&width=476&t=0" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                   </div>
-             </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6" style="margin-top: 50px !important;">
-                <!-- 16:9 aspect ratio -->
-                   <div class="embed-responsive embed-responsive-16by9 header-video" data-aos="fade-right" style="border-radius: 20px;">
-                    <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fkaizenitltd%2Fvideos%2F1190036215125991%2F&show_text=false&width=476&t=0" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                   </div>
-             </div>
-             <div class="col-md-6" style="margin-top: 50px !important;">
-                <!-- 16:9 aspect ratio -->
-                   <div class="embed-responsive embed-responsive-16by9 header-video" data-aos="fade-left" style="border-radius: 20px;">
-                    <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fkaizenitltd%2Fvideos%2F1231578484283913%2F&show_text=false&width=476&t=0" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                   </div>
-             </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6" style="margin-top: 50px !important;">
-                <!-- 16:9 aspect ratio -->
-                   <div class="embed-responsive embed-responsive-16by9 header-video" data-aos="fade-right" style="border-radius: 20px;">
-                    <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fkaizenitltd%2Fvideos%2F5201475093240557%2F&show_text=false&width=476&t=0" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                   </div>
-             </div>
-             <div class="col-md-6" style="margin-top: 50px !important;">
-                <!-- 16:9 aspect ratio -->
-                   <div class="embed-responsive embed-responsive-16by9 header-video" data-aos="fade-left" style="border-radius: 20px;">
-                    <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fkaizenitltd%2Fvideos%2F558962109172618%2F&show_text=false&width=476&t=0" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                   </div>
-             </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6" style="margin-top: 50px !important;">
-                <!-- 16:9 aspect ratio -->
-                   <div class="embed-responsive embed-responsive-16by9 header-video" data-aos="fade-right" style="border-radius: 20px;">
-                    <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fkaizenitltd%2Fvideos%2F968582013808325%2F&show_text=false&width=476&t=0" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                   </div>
-             </div>
-             <div class="col-md-6" style="margin-top: 50px !important;">
-                <!-- 16:9 aspect ratio -->
-                   <div class="embed-responsive embed-responsive-16by9 header-video" data-aos="fade-left" style="border-radius: 20px;">
-                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fkaizenitltd%2Fvideos%2F777419476598402%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                   </div>
-             </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6" style="margin-top: 50px !important;">
-                <!-- 16:9 aspect ratio -->
-                   <div class="embed-responsive embed-responsive-16by9 header-video" data-aos="fade-right" style="border-radius: 20px;">
-                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fkaizenitltd%2Fvideos%2F776951336808150%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                   </div>
-             </div>
-             <div class="col-md-6" style="margin-top: 50px !important;">
-                <!-- 16:9 aspect ratio -->
-                   <div class="embed-responsive embed-responsive-16by9 header-video" data-aos="fade-left" style="border-radius: 20px;">
-                    <iframe src="https://www.facebook.com/plugins/video.php?height=317&href=https%3A%2F%2Fwww.facebook.com%2Fkaizenitltd%2Fvideos%2F1502050433548108%2F&show_text=false&width=560&t=0" width="560" height="317" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                   </div>
-             </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6" style="margin-top: 50px !important;">
-                <!-- 16:9 aspect ratio -->
-                   <div class="embed-responsive embed-responsive-16by9 header-video" data-aos="fade-right" style="border-radius: 20px;">
-                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fkaizenitltd%2Fvideos%2F1114986649053243%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                   </div>
-             </div>
-             <div class="col-md-6" style="margin-top: 50px !important;">
-                <!-- 16:9 aspect ratio -->
-                   <div class="embed-responsive embed-responsive-16by9 header-video" data-aos="fade-left" style="border-radius: 20px;">
-                    <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fkaizenitltd%2Fvideos%2F716044486409996%2F&show_text=false&width=271&t=0" width="271" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                   </div>
-             </div>
-        </div>
 
 
     </div>
 </section>
 
-<!-- popular courses  -->
-<section id="popular-courses" class="courses">
-       <div class="container-fluid pt-5 pb-3" id="portfolio">
-             <div class="text-center">
-                 <h1 class="display-3 mb-5" style="font-weight: bold;">Popular Courses</h1>
+ <!-- popular courses  -->
+ <section id="popular-courses" class="courses">
+   <div class="container-fluid pt-5 pb-3" id="portfolio">
+         <div class="text-center">
+             <h1 class="display-3 mb-5" style="font-weight: bold;">Popular Courses</h1>
+             <p class="courses-content">Our course list is sorted by the skills that are currently most in demand  in the country and abroad. From here you can enroll in the course online or offline at any time.</p>
+         </div>
+       
+         <div class="row mb-5 mt-3 carousel-isotope">
+             <div class="col-12 text-center mb-2">
+                 <ul class="list-inline mb-4" id="portfolio-flters" style="width:130% !important; margin-left:-110px;">
+                   
+                     <li class="courese-isotope sm-3 m-1 active"  data-filter="*">All Courses</li>
+                     <li class="courese-isotope m-1 sm-3" data-filter=".designmultimedia">Design & Multimedia</li>
+                     <li class="courese-isotope m-1 sm-3" data-filter=".websoftware">Web & Software</li>
+                     <li class="courese-isotope m-1 sm-3" data-filter=".degitalmarketing">Degital Marketing</li>
+                     <li class="courese-isotope m-1 sm-3" data-filter=".Networking">Networking</li>
              </div>
-             <div class="row mb-5 mt-3 carousel-isotope">
-                 <div class="col-12 text-center mb-2">
-                     <ul class="list-inline mb-4" id="portfolio-flters">
-                         <li class="courese-isotope sm-3 m-1 active"  data-filter="*">All Courses</li>
-                         <li class="courese-isotope m-1 sm-3" data-filter=".first">Design & Multimedia</li>
-                         <li class="courese-isotope m-1 sm-3" data-filter=".second">Web & Software</li>
-                         <li class="courese-isotope m-1 sm-3" data-filter=".third">Degital Marketing</li>
-                 </div>
-                 <hr>
-             </div>
-             <div class="row portfolio-container box-container">
-               <div class="">
-                  <div class="col-lg-4 col-md-6 mb-4 portfolio-item first " data-aos="fade-left">
-                   <a href="">
-                      <div class="box">
-                         <div class="image">
-                            <img src="{{asset('assets/images/graphic.jpg')}}" alt="">
-                         </div>
-                         <div class="content">
-                            <h3>Professional graphic design</h3>
-                            <div class="d-flex">
-                               <p class="mr-auto">
-                                  <span><i class="fas fa-star"></i></span>
-                                  <span><i class="fas fa-star"></i></span>
-                                  <span><i class="fas fa-star"></i></span>
-                                  <span><i class="fas fa-star"></i></span>
-                                  <span><i class="fas fa-star-half-alt"></i></span>
-                                  (312review)
-                               </p>
-                               <p class="ml-auto pt-1rem">3,500 students</p>
+             <hr>
+         </div>
+         <div class="row portfolio-container box-container" data-aos="fade-left">
+           <div class="">
+                {{-- design & multimedia Popular-Courese --}}
+             @foreach ($p_courses as $p_course)
+             @if($p_course->course_category === "designmultimedia")
+              <div class="col-lg-4 col-md-6 mb-4 portfolio-item designmultimedia">
+               <a href="">
+                  <div class="box">
+                     <div class="image">
+                        <img src="{{asset('assets/images/popular_courses')}}/{{$p_course->image}}" alt="">
+                     </div>
+                     <div class="content">
+                        <h3>{{$p_course->course_name}}</h3>
+                        <div class="d-flex">
+                           <p class="mr-auto">
+                              <span><i class="fas fa-star"></i></span>
+                              <span><i class="fas fa-star"></i></span>
+                              <span><i class="fas fa-star"></i></span>
+                              <span><i class="fas fa-star"></i></span>
+                              <span><i class="fas fa-star-half-alt"></i></span>
+                              ({{$p_course->t_n_reviews}}review)
+                           </p>
+                           <p class="ml-auto pt-1rem">{{$p_course->t_n_students}} students</p>
 
 
-                            </div>
+                        </div>
 
-                            <div class="icons">
-                               <span> <i class="fas fa-book"></i> 12 modules </span>
-                               <span> <span class="text-success font-weight-bold">&#2547;</span> 1,200 fee </span>
-                               <span> <i class="fas fa-clock"></i> 6 hours </span>
-                            </div>
-                         </div>
-                      </div>
-                   </a>
+                        <div class="icons">
+                           <span> <i class="fas fa-book"></i> {{$p_course->n_modules}} modules </span>
+                           <span> <span class="text-success font-weight-bold">&#2547;</span> {{$p_course->price}} fee </span>
+                           <span> <i class="fas fa-clock"></i> {{$p_course->hours}} hours </span>
+                        </div>
+                     </div>
                   </div>
-                  <div class="col-lg-4 col-md-6 mb-4 portfolio-item third " data-aos="fade-up">
-                   <a href="">
-                      <div class="box">
-                         <div class="image">
-                            <img src="{{asset('assets/images/digital.jpg')}}" alt="">
-                         </div>
-                         <div class="content">
-                            <h3>Degital marketing</h3>
-                            <div class="d-flex">
-                               <p class="mr-auto">
-                                  <span><i class="fas fa-star"></i></span>
-                                  <span><i class="fas fa-star"></i></span>
-                                  <span><i class="fas fa-star"></i></span>
-                                  <span><i class="fas fa-star"></i></span>
-                                  <span><i class="fas fa-star-half-alt"></i></span>
-                                  (312review)
-                               </p>
-                               <p class="ml-auto pt-1rem">3,500 students</p>
-
-
-                            </div>
-
-                            <div class="icons">
-                               <span> <i class="fas fa-book"></i> 12 modules </span>
-                               <span> <span class="text-success font-weight-bold">&#2547;</span> 1,200 fee </span>
-                               <span> <i class="fas fa-clock"></i> 6 hours </span>
-                            </div>
-                         </div>
-                      </div>
-                   </a>
-                  </div>
-                  <div class="col-lg-4 col-md-6 mb-4 portfolio-item second " data-aos="fade-right">
-                   <a href="">
-                      <div class="box">
-                         <div class="image">
-                            <img src="{{asset('assets/images/web.png')}}" alt="">
-                         </div>
-                         <div class="content">
-                            <h3>Web design & development</h3>
-                            <div class="d-flex">
-                               <p class="mr-auto">
-                                  <span><i class="fas fa-star"></i></span>
-                                  <span><i class="fas fa-star"></i></span>
-                                  <span><i class="fas fa-star"></i></span>
-                                  <span><i class="fas fa-star"></i></span>
-                                  <span><i class="fas fa-star-half-alt"></i></span>
-                                  (312review)
-                               </p>
-                               <p class="ml-auto pt-1rem">3,500 students</p>
-
-
-                            </div>
-
-                            <div class="icons">
-                               <span> <i class="fas fa-book"></i> 12 modules </span>
-                               <span> <span class="text-success font-weight-bold">&#2547;</span> 1,200 fee </span>
-                               <span> <i class="fas fa-clock"></i> 6 hours </span>
-                            </div>
-                         </div>
-                      </div>
-                   </a>
-                  </div>
-                  <div class="col-lg-4 col-md-6 mb-4 portfolio-item fourth " data-aos="fade-left">
-                   <a href="">
-                      <div class="box">
-                         <div class="image">
-                            <img src="{{asset('assets/images/arduino.jpg')}}" alt="">
-                         </div>
-                         <div class="content">
-                            <h3>Adruino & Robotics</h3>
-                            <div class="d-flex">
-                               <p class="mr-auto">
-                                  <span><i class="fas fa-star"></i></span>
-                                  <span><i class="fas fa-star"></i></span>
-                                  <span><i class="fas fa-star"></i></span>
-                                  <span><i class="fas fa-star"></i></span>
-                                  <span><i class="fas fa-star-half-alt"></i></span>
-                                  (312review)
-                               </p>
-                               <p class="ml-auto pt-1rem">3,500 students</p>
-
-
-                            </div>
-
-                            <div class="icons">
-                               <span> <i class="fas fa-book"></i> 12 modules </span>
-                               <span> <span class="text-success font-weight-bold">&#2547;</span> 1,200 fee </span>
-                               <span> <i class="fas fa-clock"></i> 6 hours </span>
-                            </div>
-                         </div>
-                      </div>
-                   </a>
-                  </div>
-                  <div class="col-lg-4 col-md-6 mb-4 portfolio-item five " data-aos="fade-right">
-                   <a href="">
-                      <div class="box">
-                         <div class="image">
-                            <img src="{{asset('assets/images/mikro.png')}}" alt="">
-                         </div>
-                         <div class="content">
-                            <h3>Mikro-Tik & ISP support</h3>
-                            <div class="d-flex">
-                               <p class="mr-auto">
-                                  <span><i class="fas fa-star"></i></span>
-                                  <span><i class="fas fa-star"></i></span>
-                                  <span><i class="fas fa-star"></i></span>
-                                  <span><i class="fas fa-star"></i></span>
-                                  <span><i class="fas fa-star-half-alt"></i></span>
-                                  (312review)
-                               </p>
-                               <p class="ml-auto pt-1rem">3,500 students</p>
-
-
-                            </div>
-
-                            <div class="icons">
-                               <span> <i class="fas fa-book"></i> 12 modules </span>
-                               <span> <span class="text-success font-weight-bold">&#2547;</span> 1,200 fee </span>
-                               <span> <i class="fas fa-clock"></i> 6 hours </span>
-                            </div>
-                         </div>
-                      </div>
-                   </a>
-                  </div>
+               </a>
+               
               </div>
-            </div>
-     </div>
+              @endif
+              @endforeach
+
+              {{-- Web & Software Populkar course  --}}
+              @foreach ($p_courses as $p_course)
+              @if($p_course->course_category === "websoftware")
+               <div class="col-lg-4 col-md-6 mb-4 portfolio-item websoftware">
+                <a href="">
+                   <div class="box">
+                      <div class="image">
+                         <img src="{{asset('assets/images/popular_courses')}}/{{$p_course->image}}" alt="">
+                      </div>
+                      <div class="content">
+                         <h3>{{$p_course->course_name}}</h3>
+                         <div class="d-flex">
+                            <p class="mr-auto">
+                               <span><i class="fas fa-star"></i></span>
+                               <span><i class="fas fa-star"></i></span>
+                               <span><i class="fas fa-star"></i></span>
+                               <span><i class="fas fa-star"></i></span>
+                               <span><i class="fas fa-star-half-alt"></i></span>
+                               ({{$p_course->t_n_reviews}}review)
+                            </p>
+                            <p class="ml-auto pt-1rem">{{$p_course->t_n_students}} students</p>
+
+
+                         </div>
+
+                         <div class="icons">
+                            <span> <i class="fas fa-book"></i> {{$p_course->n_modules}} modules </span>
+                            <span> <span class="text-success font-weight-bold">&#2547;</span> {{$p_course->price}} fee </span>
+                            <span> <i class="fas fa-clock"></i> {{$p_course->hours}} hours </span>
+                         </div>
+                      </div>
+                   </div>
+                </a>
+                
+               </div>
+               @endif
+               @endforeach
+
+               {{-- degitalmarketing Popular course  --}}
+               @foreach ($p_courses as $p_course)
+               @if($p_course->course_category === "degitalmarketing")
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item degitalmarketing">
+                 <a href="">
+                    <div class="box">
+                       <div class="image">
+                          <img src="{{asset('assets/images/popular_courses')}}/{{$p_course->image}}" alt="">
+                       </div>
+                       <div class="content">
+                          <h3>{{$p_course->course_name}}</h3>
+                          <div class="d-flex">
+                             <p class="mr-auto">
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star-half-alt"></i></span>
+                                ({{$p_course->t_n_reviews}}review)
+                             </p>
+                             <p class="ml-auto pt-1rem">{{$p_course->t_n_students}} students</p>
+
+
+                          </div>
+
+                          <div class="icons">
+                             <span> <i class="fas fa-book"></i> {{$p_course->n_modules}} modules </span>
+                             <span> <span class="text-success font-weight-bold">&#2547;</span> {{$p_course->price}} fee </span>
+                             <span> <i class="fas fa-clock"></i> {{$p_course->hours}} hours </span>
+                          </div>
+                       </div>
+                    </div>
+                 </a>
+                 
+                </div>
+                @endif
+                @endforeach
+
+
+               {{-- degitalmarketing Popular course  --}}
+               @foreach ($p_courses as $p_course)
+               @if($p_course->course_category === "Networking")
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item Networking">
+                 <a href="">
+                    <div class="box">
+                       <div class="image">
+                          <img src="{{asset('assets/images/popular_courses')}}/{{$p_course->image}}" alt="">
+                       </div>
+                       <div class="content">
+                          <h3>{{$p_course->course_name}}</h3>
+                          <div class="d-flex">
+                             <p class="mr-auto">
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star-half-alt"></i></span>
+                                ({{$p_course->t_n_reviews}}review)
+                             </p>
+                             <p class="ml-auto pt-1rem">{{$p_course->t_n_students}} students</p>
+
+
+                          </div>
+
+                          <div class="icons">
+                             <span> <i class="fas fa-book"></i> {{$p_course->n_modules}} modules </span>
+                             <span> <span class="text-success font-weight-bold">&#2547;</span> {{$p_course->price}} fee </span>
+                             <span> <i class="fas fa-clock"></i> {{$p_course->hours}} hours </span>
+                          </div>
+                       </div>
+                    </div>
+                 </a>
+                 
+                </div>
+                @endif
+                @endforeach
+
+          </div>
+        </div>
+ </div>
 
 </section>

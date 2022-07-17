@@ -74,7 +74,7 @@
 
                    <li>
                       <img src="{{asset('assets/images/enternship.png')}}" alt="">
-                      <h3>Expatriate</h3>
+                      <h3>InternerShips</h3>
                    </li>
                    <li>
                       <img src="{{asset('assets/images/freelancing-interest.png')}}" alt="">
@@ -82,7 +82,7 @@
                    </li>
                    <li>
                       <img src="{{asset('assets/images/resident.png')}}" alt="">
-                      <h3>Students</h3>
+                      <h3>jobless person</h3>
                    </li>
                    <li>
                       <img src="{{asset('assets/images/students.png')}}" alt="">
@@ -106,53 +106,64 @@
        </div>
     </div>
 
-    <div class="counter-up">
-       <div class="content">
-          <div class="box">
-              <div class="icon"><i class="fa fa-user"></i></div>
-              <div class="d-flex justify-content-center">
-                <div class="counter"> 543 </div>
-                <div class="plus">+</div>
-               </div>
-              <div class="text">Students</div>
-           </div>
-          <div class="box">
-             <div class="icon"><i class="fas fa-laptop-code"></i></div>
-             <div class="d-flex justify-content-center">
-                  <div class="counter"> 580 </div>
-                  <div class="plus">+</div>
-             </div>
-             <div class="text">Freelancer</div>
-          </div>
-          <div class="box">
-             <div class="icon"><i class="far fa-building"></i></div>
-             <div class="d-flex justify-content-center">
-                  <div class="counter"> 374 </div>
-                  <div class="plus">+</div>
-             </div>
-             <div class="text" >Companies Connected</div>
-          </div>
-          <div class="box">
-             <div class="icon"><i class="fas fa-check-double"></i></div>
-             <div class="d-flex justify-content-center">
-          <div class="counter"> 99 </div>
-          <div class="plus">+</div>
-             </div>
-             <div class="text">Success rate</div>
-          </div>
-          <div class="box">
-             <div class="icon"><i class="fas fa-globe"></i></div>
-             <div class="d-flex justify-content-center">
-                  <div class="counter"> 1647 </div>
-                  <div class="plus">+</div>
-             </div>
-             <div class="text">Employer</div>
-          </div>
+<section class="about">
+    <div class="content">
+      <div class="icons-container">
+         <div class="icons">
+            <img src="{{asset('assets/images/about-icon-1.png')}}" alt="">
+            <div class="d-flex justify-content-center">
+               <h3 class="counter">650</h3>
+               <h3>+</h3>
+            </div>
+            <span>Students</span>
+         </div>
+         <div class="icons">
+            <img src="{{asset('assets/images/about-icon-2.png')}}" alt="">
+            <div class="d-flex justify-content-center"></div>
+            <div class="d-flex justify-content-center">
+               <h3 class="counter">120</h3>
+               <h3>+</h3>
+            </div>
+            <span>Freelancer</span>
+         </div>
+         <div class="icons">
+            <img src="{{asset('assets/images/about-icon-3.png')}}" alt="">
+            <div class="d-flex justify-content-center">
+               <h3 class="counter">100</h3>
+               <h3>+</h3>
+            </div>
+            <span>Companies Connected</span>
+         </div>
+         <div class="icons">
+            <img src="{{asset('assets/images/enternship.png')}}" alt="">
+            <div class="d-flex justify-content-center">
+               <h3 class="counter">150</h3>
+               <h3>+</h3>
+            </div>
+            <span>Employers</span>
+         </div>
+         <div class="icons">
+            <img src="{{asset('assets/images/students.png')}}" alt="">
+            <div class="d-flex justify-content-center">
+               <h3 class="counter">200</h3>
+               <h3>+</h3>
+            </div>
+            <span>gratuated students</span>
+         </div>
+
+         <div class="icons">
+            <img src="{{asset('assets/images/success_icon_1.svg')}}" alt="">
+            <div class="d-flex justify-content-center">
+               <h3 class="counter">99.9</h3>
+               <h3>%</h3>
+            </div>
+            <span>Success ratio</span>
+         </div>
 
 
-       </div>
-    </div>
-
+      </div>
+   </div>
+</section>
 
  </section>
 

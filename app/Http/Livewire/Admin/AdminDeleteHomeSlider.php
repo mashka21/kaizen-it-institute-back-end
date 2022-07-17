@@ -10,7 +10,7 @@ class AdminDeleteHomeSlider extends Component
     public function deleteSlide($id){
         $slider = HomeSlider::find($id);
         $slider->delete();
-        session()->flush('message','Home Slider has been deleted successfully');
+        session()->flash('message','Home Slider has been deleted successfully');
     }
     public function render()
     {

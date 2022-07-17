@@ -7,11 +7,10 @@ use Livewire\Component;
 use Livewire\WithPagination;
 class AdminDeleteUsers extends Component
 {
-    use WithPagination;
     public function deleteUser($id){
         $user = User::find($id);
         $user->delete();
-        session()->flush('message','User deleted successfully');
+        session()->flash('message','User deleted successfully');
     }
     public function render()
     {

@@ -107,6 +107,7 @@
                           <li class="courese-isotope m-1 sm-3" data-filter=".designmultimedia">Design & Multimedia</li>
                           <li class="courese-isotope m-1 sm-3" data-filter=".websoftware">Web & Software</li>
                           <li class="courese-isotope m-1 sm-3" data-filter=".degitalmarketing">Degital Marketing</li>
+                          <li class="courese-isotope m-1 sm-3" data-filter=".Networking">Networking</li>
                   </div>
                   <hr>
               </div>
@@ -226,6 +227,45 @@
                      @endif
                      @endforeach
 
+
+                    {{-- degitalmarketing Popular course  --}}
+                    @foreach ($p_courses as $p_course)
+                    @if($p_course->course_category === "Networking")
+                     <div class="col-lg-4 col-md-6 mb-4 portfolio-item Networking">
+                      <a href="">
+                         <div class="box">
+                            <div class="image">
+                               <img src="{{asset('assets/images/popular_courses')}}/{{$p_course->image}}" alt="">
+                            </div>
+                            <div class="content">
+                               <h3>{{$p_course->course_name}}</h3>
+                               <div class="d-flex">
+                                  <p class="mr-auto">
+                                     <span><i class="fas fa-star"></i></span>
+                                     <span><i class="fas fa-star"></i></span>
+                                     <span><i class="fas fa-star"></i></span>
+                                     <span><i class="fas fa-star"></i></span>
+                                     <span><i class="fas fa-star-half-alt"></i></span>
+                                     ({{$p_course->t_n_reviews}}review)
+                                  </p>
+                                  <p class="ml-auto pt-1rem">{{$p_course->t_n_students}} students</p>
+  
+  
+                               </div>
+  
+                               <div class="icons">
+                                  <span> <i class="fas fa-book"></i> {{$p_course->n_modules}} modules </span>
+                                  <span> <span class="text-success font-weight-bold">&#2547;</span> {{$p_course->price}} fee </span>
+                                  <span> <i class="fas fa-clock"></i> {{$p_course->hours}} hours </span>
+                               </div>
+                            </div>
+                         </div>
+                      </a>
+                      
+                     </div>
+                     @endif
+                     @endforeach
+
                </div>
              </div>
       </div>
@@ -264,67 +304,13 @@
        <div class="swiper teachers-slider comments-slider">
 
           <div class="swiper-wrapper">
-
+            @foreach ($comments as $comment)
              <div class="swiper-slide slide ml-3">
                 <div class="image">
-                   <img src="{{asset('assets/images/comment-1.JPG')}}" alt="" height="200" style="border-right: 3px solid rgb(226, 222, 222); border-left: 3px solid rgb(226, 222, 222);; border-top: 3px solid rgb(226, 222, 222);; border-bottom: 3px solid rgb(226, 222, 222);;">
+                   <img src="{{asset('assets/images/comments')}}/{{$comment->image}}" alt="" height="200" style="border-right: 3px solid rgb(226, 222, 222); border-left: 3px solid rgb(226, 222, 222);; border-top: 3px solid rgb(226, 222, 222);; border-bottom: 3px solid rgb(226, 222, 222);;">
                 </div>
              </div>
-
-             <div class="swiper-slide slide ml-3">
-                <div class="image">
-                   <img src="{{asset('assets/images/comment-2.JPG')}}" alt="" height="200" style="border-right: 3px solid rgb(226, 222, 222); border-left: 3px solid rgb(226, 222, 222);; border-top: 3px solid rgb(226, 222, 222);; border-bottom: 3px solid rgb(226, 222, 222);">
-                </div>
-             </div>
-
-             <div class="swiper-slide slide ml-3">
-                <div class="image">
-                   <img src="{{asset('assets/images/comment-3.JPG')}}" alt="" height="200" style="border-right: 3px solid rgb(226, 222, 222); border-left: 3px solid rgb(226, 222, 222);; border-top: 3px solid rgb(226, 222, 222);; border-bottom: 3px solid rgb(226, 222, 222);">
-                </div>
-             </div>
-
-             <div class="swiper-slide slide ml-3">
-                <div class="image">
-                   <img src="{{asset('assets/images/comment-4.JPG')}}" alt=""height="200" style="border-right: 3px solid rgb(226, 222, 222); border-left: 3px solid rgb(226, 222, 222);; border-top: 3px solid rgb(226, 222, 222);; border-bottom: 3px solid rgb(226, 222, 222);">
-                </div>
-             </div>
-
-             <div class="swiper-slide slide ml-3">
-                <div class="image">
-                   <img src="{{asset('assets/images/comment-5.JPG')}}" alt=""height="200" style="border-right: 3px solid rgb(226, 222, 222); border-left: 3px solid rgb(226, 222, 222);; border-top: 3px solid rgb(226, 222, 222);; border-bottom: 3px solid rgb(226, 222, 222);">
-                </div>
-             </div>
-
-             <div class="swiper-slide slide ml-3">
-                <div class="image">
-                   <img src="{{asset('assets/images/comment-6.JPG')}}" alt="" height="200" style="border-right: 3px solid rgb(226, 222, 222); border-left: 3px solid rgb(226, 222, 222);; border-top: 3px solid rgb(226, 222, 222);; border-bottom: 3px solid rgb(226, 222, 222);">
-                </div>
-             </div>
-
-             <div class="swiper-slide slide ml-3">
-                <div class="image">
-                   <img src="{{asset('assets/images/comment-7.JPG')}}" alt="" height="200" style="border-right: 3px solid rgb(226, 222, 222); border-left: 3px solid rgb(226, 222, 222);; border-top: 3px solid rgb(226, 222, 222);; border-bottom: 3px solid rgb(226, 222, 222);">
-                </div>
-             </div>
-
-             <div class="swiper-slide slide ml-3">
-                <div class="image">
-                   <img src="{{asset('assets/images/comment-8.JPG')}}" alt="" height="200" style="border-right: 3px solid rgb(226, 222, 222); border-left: 3px solid rgb(226, 222, 222);; border-top: 3px solid rgb(226, 222, 222);; border-bottom: 3px solid rgb(226, 222, 222);">
-                </div>
-             </div>
-
-             <div class="swiper-slide slide ml-3">
-                <div class="image">
-                   <img src="{{asset('assets/images/comment-9.JPG')}}" alt="" height="200" style="border-right: 3px solid rgb(226, 222, 222); border-left: 3px solid rgb(226, 222, 222);; border-top: 3px solid rgb(226, 222, 222);; border-bottom: 3px solid rgb(226, 222, 222);">
-                </div>
-             </div>
-
-             <div class="swiper-slide slide ml-3">
-                <div class="image">
-                   <img src="{{asset('assets/images/comment-10.JPG')}}" alt="" height="200" style="border-right: 3px solid rgb(226, 222, 222); border-left: 3px solid rgb(226, 222, 222);; border-top: 3px solid rgb(226, 222, 222);; border-bottom: 3px solid rgb(226, 222, 222);">
-                </div>
-             </div>
-
+             @endforeach
           </div>
 
        </div>
@@ -342,288 +328,161 @@
    <!-- Dsign and Multimedia  -->
    <h1 style="margin-top: 2rem; margin-bottom: 2rem; font-size: 3rem; font-weight: bold;">Design and Multimedia</h1>
    <div class="box-container">
-          <a href="" data-aos="fade-right">
-             <div class="box">
-                <div class="image">
-                   <img src="{{asset('assets/images/graphic.jpg')}}" alt="">
-                </div>
-                <div class="content">
-                   <h3>Professional graphic design</h3>
-                   <div class="d-flex">
-                      <p class="mr-auto">
-                         <span><i class="fas fa-star"></i></span>
-                         <span><i class="fas fa-star"></i></span>
-                         <span><i class="fas fa-star"></i></span>
-                         <span><i class="fas fa-star"></i></span>
-                         <span><i class="fas fa-star-half-alt"></i></span>
-                         (312review)
-                      </p>
-                      <p class="ml-auto pt-1rem">3,500 students</p>
+
+      @foreach ($p_courses as $p_course)
+      @if($p_course->course_category === "designmultimedia")
+         <a href="">
+            <div class="box">
+               <div class="image">
+                  <img src="{{asset('assets/images/popular_courses')}}/{{$p_course->image}}" alt="">
+               </div>
+               <div class="content">
+                  <h3>{{$p_course->course_name}}</h3>
+                  <div class="d-flex">
+                     <p class="mr-auto">
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star-half-alt"></i></span>
+                        ({{$p_course->t_n_reviews}}review)
+                     </p>
+                     <p class="ml-auto pt-1rem">{{$p_course->t_n_students}} students</p>
 
 
-                   </div>
+                  </div>
 
-                   <div class="icons">
-                      <span> <i class="fas fa-book"></i> 12 modules </span>
-                      <span> <span class="text-success font-weight-bold">&#2547;</span> 1,200 fee </span>
-                      <span> <i class="fas fa-clock"></i> 6 hours </span>
-                   </div>
-                </div>
-             </div>
-          </a>
-          <a href="" data-aos="fade-down">
-             <div class="box">
-                <div class="image">
-                   <img src="{{asset('assets/images/uiux.jpg')}}" alt="">
-                </div>
-                <div class="content">
-                   <h3>UX / UI design</h3>
-                   <div class="d-flex">
-                      <p class="mr-auto">
-                         <span><i class="fas fa-star"></i></span>
-                         <span><i class="fas fa-star"></i></span>
-                         <span><i class="fas fa-star"></i></span>
-                         <span><i class="fas fa-star"></i></span>
-                         <span><i class="fas fa-star-half-alt"></i></span>
-                         (312review)
-                      </p>
-                      <p class="ml-auto pt-1rem">3,500 students</p>
+                  <div class="icons">
+                     <span> <i class="fas fa-book"></i> {{$p_course->n_modules}} modules </span>
+                     <span> <span class="text-success font-weight-bold">&#2547;</span> {{$p_course->price}} fee </span>
+                     <span> <i class="fas fa-clock"></i> {{$p_course->hours}} hours </span>
+                  </div>
+               </div>
+            </div>
+         </a>
+      @endif
+    @endforeach
 
-
-                   </div>
-
-                   <div class="icons">
-                      <span> <i class="fas fa-book"></i> 12 modules </span>
-                      <span> <span class="text-success font-weight-bold">&#2547;</span> 1,200 fee </span>
-                      <span> <i class="fas fa-clock"></i> 6 hours </span>
-                   </div>
-                </div>
-             </div>
-          </a>
-          <a href="" data-aos="fade-left">
-             <div class="box">
-                <div class="image">
-                   <img src="{{asset('assets/images/montion.jpg')}}" alt="">
-                </div>
-                <div class="content">
-                   <h3>Motion Graphics</h3>
-                   <div class="d-flex">
-                      <p class="mr-auto">
-                         <span><i class="fas fa-star"></i></span>
-                         <span><i class="fas fa-star"></i></span>
-                         <span><i class="fas fa-star"></i></span>
-                         <span><i class="fas fa-star"></i></span>
-                         <span><i class="fas fa-star-half-alt"></i></span>
-                         (312review)
-                      </p>
-                      <p class="ml-auto pt-1rem">3,500 students</p>
-
-
-                   </div>
-
-                   <div class="icons">
-                      <span> <i class="fas fa-book"></i> 12 modules </span>
-                      <span> <span class="text-success font-weight-bold">&#2547;</span> 1,200 fee </span>
-                      <span> <i class="fas fa-clock"></i> 6 hours </span>
-                   </div>
-                </div>
-             </div>
-          </a>
 
       </div>
     </div>
-
     <!-- Web and Software  -->
     <h1 style="margin-top: 8rem; margin-bottom: 4rem; font-size: 3rem; font-weight: bold;">Web and Software</h1>
     <div class="box-container">
 
-       <a href="" data-aos="fade-right">
-          <div class="box">
-             <div class="image">
-                <img src="{{asset('assets/images/wbed1.jpg')}}" alt="">
-             </div>
-             <div class="content">
-                <h3>Web design</h3>
-                <div class="d-flex">
-                   <p class="mr-auto">
-                      <span><i class="fas fa-star"></i></span>
-                      <span><i class="fas fa-star"></i></span>
-                      <span><i class="fas fa-star"></i></span>
-                      <span><i class="fas fa-star"></i></span>
-                      <span><i class="fas fa-star-half-alt"></i></span>
-                      (312review)
-                   </p>
-                   <p class="ml-auto pt-1rem">3,500 students</p>
+      @foreach ($p_courses as $p_course)
+        @if($p_course->course_category === "websoftware")
+         <a href="">
+            <div class="box">
+               <div class="image">
+                  <img src="{{asset('assets/images/popular_courses')}}/{{$p_course->image}}" alt="">
+               </div>
+               <div class="content">
+                  <h3>{{$p_course->course_name}}</h3>
+                  <div class="d-flex">
+                     <p class="mr-auto">
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star-half-alt"></i></span>
+                        ({{$p_course->t_n_reviews}}review)
+                     </p>
+                     <p class="ml-auto pt-1rem">{{$p_course->t_n_students}} students</p>
 
 
-                </div>
+                  </div>
 
-                <div class="icons">
-                   <span> <i class="fas fa-book"></i> 12 modules </span>
-                   <span> <span class="text-success font-weight-bold">&#2547;</span> 1,200 fee </span>
-                   <span> <i class="fas fa-clock"></i> 6 hours </span>
-                </div>
-             </div>
-          </div>
-       </a>
-
-       <a href="" data-aos="fade-down">
-          <div class="box">
-             <div class="image">
-                <img src="{{asset('assets/images/webd2.jpg')}}" alt="">
-             </div>
-             <div class="content">
-                <h3>Web development</h3>
-                <div class="d-flex">
-                   <p class="mr-auto">
-                      <span><i class="fas fa-star"></i></span>
-                      <span><i class="fas fa-star"></i></span>
-                      <span><i class="fas fa-star"></i></span>
-                      <span><i class="fas fa-star"></i></span>
-                      <span><i class="fas fa-star-half-alt"></i></span>
-                      (312review)
-                   </p>
-                   <p class="ml-auto pt-1rem">3,500 students</p>
-
-
-                </div>
-
-                <div class="icons">
-                   <span> <i class="fas fa-book"></i> 12 modules </span>
-                   <span> <span class="text-success font-weight-bold">&#2547;</span> 1,200 fee </span>
-                   <span> <i class="fas fa-clock"></i> 6 hours </span>
-                </div>
-             </div>
-          </div>
-       </a>
-
-       <a href="" data-aos="fade-left">
-       <div class="box">
-          <div class="image">
-             <img src="{{asset('assets/images/mern.jpg')}}" alt="">
-          </div>
-          <div class="content">
-             <h3>Mern stack development</h3>
-             <div class="d-flex">
-                <p class="mr-auto">
-                   <span><i class="fas fa-star"></i></span>
-                   <span><i class="fas fa-star"></i></span>
-                   <span><i class="fas fa-star"></i></span>
-                   <span><i class="fas fa-star"></i></span>
-                   <span><i class="fas fa-star-half-alt"></i></span>
-                   (312review)
-                </p>
-                <p class="ml-auto pt-1rem">3,500 students</p>
-
-
-             </div>
-
-             <div class="icons">
-                <span> <i class="fas fa-book"></i> 12 modules </span>
-                <span> <span class="text-success font-weight-bold">&#2547;</span> 1,200 fee </span>
-                <span> <i class="fas fa-clock"></i> 6 hours </span>
-             </div>
-          </div>
-       </div>
-       </a>
+                  <div class="icons">
+                     <span> <i class="fas fa-book"></i> {{$p_course->n_modules}} modules </span>
+                     <span> <span class="text-success font-weight-bold">&#2547;</span> {{$p_course->price}} fee </span>
+                     <span> <i class="fas fa-clock"></i> {{$p_course->hours}} hours </span>
+                  </div>
+               </div>
+            </div>
+         </a>
+        @endif
+      @endforeach
     </div>
 
        <!-- Digital Marketing  -->
        <h1 style="margin-top: 8rem; margin-bottom: 4rem; font-size: 3rem; font-weight: bold;">Digital Marketing</h1>
        <div class="box-container">
 
-          <a href="" data-aos="fade-right">
-             <div class="box">
-                <div class="image">
-                   <img src="{{asset('assets/images/digital.jpg')}}" alt="">
-                </div>
-                <div class="content">
-                   <h3>Degital Marketing</h3>
-                   <div class="d-flex">
-                      <p class="mr-auto">
-                         <span><i class="fas fa-star"></i></span>
-                         <span><i class="fas fa-star"></i></span>
-                         <span><i class="fas fa-star"></i></span>
-                         <span><i class="fas fa-star"></i></span>
-                         <span><i class="fas fa-star-half-alt"></i></span>
-                         (312review)
-                      </p>
-                      <p class="ml-auto pt-1rem">3,500 students</p>
-
-
-                   </div>
-
-                   <div class="icons">
-                      <span> <i class="fas fa-book"></i> 12 modules </span>
-                      <span> <span class="text-success font-weight-bold">&#2547;</span> 1,200 fee </span>
-                      <span> <i class="fas fa-clock"></i> 6 hours </span>
-                   </div>
-                </div>
-             </div>
+         @foreach ($p_courses as $p_course)
+         @if($p_course->course_category === "degitalmarketing")
+          <a href="">
+            <div class="box">
+               <div class="image">
+                  <img src="{{asset('assets/images/popular_courses')}}/{{$p_course->image}}" alt="">
+               </div>
+               <div class="content">
+                  <h3>{{$p_course->course_name}}</h3>
+                  <div class="d-flex">
+                     <p class="mr-auto">
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star-half-alt"></i></span>
+                        ({{$p_course->t_n_reviews}}review)
+                     </p>
+                     <p class="ml-auto pt-1rem">{{$p_course->t_n_students}} students</p>
+   
+   
+                  </div>
+   
+                  <div class="icons">
+                     <span> <i class="fas fa-book"></i> {{$p_course->n_modules}} modules </span>
+                     <span> <span class="text-success font-weight-bold">&#2547;</span> {{$p_course->price}} fee </span>
+                     <span> <i class="fas fa-clock"></i> {{$p_course->hours}} hours </span>
+                  </div>
+               </div>
+            </div>
           </a>
-
-          <a href="" data-aos="fade-down">
-             <div class="box">
-                <div class="image">
-                   <img src="{{asset('assets/images/social.jpg')}}" alt="">
-                </div>
-                <div class="content">
-                   <h3>Social Media Marketing</h3>
-                   <div class="d-flex">
-                      <p class="mr-auto">
-                         <span><i class="fas fa-star"></i></span>
-                         <span><i class="fas fa-star"></i></span>
-                         <span><i class="fas fa-star"></i></span>
-                         <span><i class="fas fa-star"></i></span>
-                         <span><i class="fas fa-star-half-alt"></i></span>
-                         (312review)
-                      </p>
-                      <p class="ml-auto pt-1rem">3,500 students</p>
-
-
-                   </div>
-
-                   <div class="icons">
-                      <span> <i class="fas fa-book"></i> 12 modules </span>
-                      <span> <span class="text-success font-weight-bold">&#2547;</span> 1,200 fee </span>
-                      <span> <i class="fas fa-clock"></i> 6 hours </span>
-                   </div>
-                </div>
-             </div>
-          </a>
-
-          <a href="" data-aos="fade-left">
-          <div class="box">
-             <div class="image">
-                <img src="{{asset('assets/images/google.jpg')}}" alt="">
-             </div>
-             <div class="content">
-                <h3>Google Adsense</h3>
-                <div class="d-flex">
-                   <p class="mr-auto">
-                      <span><i class="fas fa-star"></i></span>
-                      <span><i class="fas fa-star"></i></span>
-                      <span><i class="fas fa-star"></i></span>
-                      <span><i class="fas fa-star"></i></span>
-                      <span><i class="fas fa-star-half-alt"></i></span>
-                      (312review)
-                   </p>
-                   <p class="ml-auto pt-1rem">3,500 students</p>
-
-
-                </div>
-
-                <div class="icons">
-                   <span> <i class="fas fa-book"></i> 12 modules </span>
-                   <span> <span class="text-success font-weight-bold">&#2547;</span> 1,200 fee </span>
-                   <span> <i class="fas fa-clock"></i> 6 hours </span>
-                </div>
-             </div>
-          </div>
-          </a>
+         @endif
+       @endforeach
        </div>
+
+      <!-- Networking  -->
+      <h1 style="margin-top: 8rem; margin-bottom: 4rem; font-size: 3rem; font-weight: bold;">Networking</h1>
+      <div class="box-container">
+         @foreach ($p_courses as $p_course)
+         @if($p_course->course_category === "Networking")
+         <a href="">
+            <div class="box">
+               <div class="image">
+                  <img src="{{asset('assets/images/popular_courses')}}/{{$p_course->image}}" alt="">
+               </div>
+               <div class="content">
+                  <h3>{{$p_course->course_name}}</h3>
+                  <div class="d-flex">
+                     <p class="mr-auto">
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star-half-alt"></i></span>
+                        ({{$p_course->t_n_reviews}}review)
+                     </p>
+                     <p class="ml-auto pt-1rem">{{$p_course->t_n_students}} students</p>
+   
+   
+                  </div>
+   
+                  <div class="icons">
+                     <span> <i class="fas fa-book"></i> {{$p_course->n_modules}} modules </span>
+                     <span> <span class="text-success font-weight-bold">&#2547;</span> {{$p_course->price}} fee </span>
+                     <span> <i class="fas fa-clock"></i> {{$p_course->hours}} hours </span>
+                  </div>
+               </div>
+            </div>
+         </a>
+         @endif
+      @endforeach
+      </div>
        <div class="text-center mt-5 mb-5">
-          <a href="courses.html" class="btn btn-success mb-5 mt-5" style="font-size: 12px;">See all courses</a>
+          <a href="/courses" class="btn btn-success mb-5 mt-5" style="font-size: 12px;">See all courses</a>
       </div>
  </section>
 
@@ -638,11 +497,14 @@
              <h3  style="font-weight: bold;">Upcoming free seminars</h3>
              <div id="semianr-1">
                 <div class="mt-5 float-none" style="background:#fff; border-radius:20px;">
-                   <div class="seminar-content-div mt-5 float-left">
-                      <p class="seminar-content-p">Web development With laravel</p>
-                      <p class="seminar-date" style="font-size: 12px;">Online , time : 08:00 pm _</p>
-                   </div>
-                   <button class="btn btn-success float-right mt-5" style="font-size: 12px;">join</button>
+                  @foreach ($freeseminars as $freeseminar)
+                     <div class="seminar-content-div mt-5 float-left">
+                        <p class="seminar-content-p">{{$freeseminar->seminar_name}}</p>
+                        <p class="seminar-date" style="font-size: 12px;">{{$freeseminar->seminar_type == 1 ? 'Offline' : 'Online'}} , Date : {{$freeseminar->seminar_time}} _</p>
+                     </div>
+                     <button class="btn btn-success float-right mt-5" style="font-size: 12px;">join</button>
+                  @endforeach
+                   
                 </div>
              </div>
              <div class="semianr-2"></div>
