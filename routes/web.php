@@ -33,7 +33,9 @@ use App\Http\Livewire\Admin\EditComment;
 use App\Http\Livewire\Admin\EditHomeSliderForm;
 use App\Http\Livewire\Admin\EditPopularCourseForm;
 use App\Http\Livewire\Admin\EditUser;
+use App\Http\Livewire\AdmissionFormComponent;
 use App\Http\Livewire\ContactComponent;
+use App\Http\Livewire\CourseDetailsComponent;
 use App\Http\Livewire\CoursesComponent;
 use App\Http\Livewire\FreelancingComponent;
 use App\Http\Livewire\HomeComponent;
@@ -73,6 +75,8 @@ Route::get('/freelancing',FreelancingComponent::class);
 Route::get('/success-story',SuccessStoryComponent::class);
 Route::get('/contact',ContactComponent::class);
 Route::get('/courses',CoursesComponent::class);
+Route::get('/course/{slug}',CourseDetailsComponent::class)->name('course.details');
+Route::get('/make-admission-course',AdmissionFormComponent::class);
 
 
 Route::middleware(['auth:sanctum','verified','authadmin'])->group(function(){

@@ -112,14 +112,6 @@
                         </ul>
                     </li>
 
-                    <li>
-                        <a href="{{route('admin.settings')}}"> <i class="menu-icon ti-settings fa fa-dashboard"></i>Settings </a>
-                    </li>
-
-                    <li>
-                        <a href="{{route('admin.managecontacts')}}"> <i class="menu-icon fa fa-users"></i>Contacts </a>
-                    </li>
-
                     <h3 class="menu-title text-success">Admin Manage Partners</h3>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Manage Parnters</a>
@@ -127,6 +119,14 @@
                             <li><i class="fa fa-table text-success"></i><a href="{{route('admin.managepartners')}}">Manage Partenrs</a></li>
                             <li><i class="fa fa-plus text-primary"></i><a href="{{route('admin.addPartners')}}">Add Partner</a></li>
                         </ul>
+                    </li>
+
+                    <li>
+                        <a href="{{route('admin.settings')}}"> <i class="menu-icon ti-settings fa fa-dashboard"></i>Settings </a>
+                    </li>
+
+                    <li>
+                        <a href="{{route('admin.managecontacts')}}"> <i class="menu-icon fa fa-users"></i>Contacts </a>
                     </li>
 
                 </ul>

@@ -2,15 +2,13 @@
 
 namespace App\Models;
 
+use App\Models\PopularCourses;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class PopularCourses extends Model
+class Admission extends Model
 {
-    protected $table ="popular_courses";
     use HasFactory;
+    protected $table = "admissions";
 
-    protected $fillable = [
-        'module',
-    ];
 }

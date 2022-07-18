@@ -39,45 +39,45 @@
        <div class="box-container">
 
         <div class="owl-carousel">
-       <a href="design&multimedia.html" style="text-decoration: none;">
+       <a href="/courses" style="text-decoration: none;">
           <div class="box">
              <i class="fas fa-book fa-4x text-success"></i>
              <h3>Design & multimedia</h3>
           </div>
        </a>
 
-       <a href="web&software.html" style="text-decoration: none;">
+       <a href="/courses" style="text-decoration: none;">
           <div class="box">
              <i class="fas fa-blog fa-4x text-success"></i>
               <h3>Web & Software</h3>
            </div>
        </a>
-       <a href="digital-marketing.html" style="text-decoration: none;">
+       <a href="/courses" style="text-decoration: none;">
            <div class="box">
              <i class="fas fa-book fa-4x text-success"></i>
               <h3>Degital Marketing</h3>
            </div>
        </a>
 
-       <a href="cyber-secuirty.html" style="text-decoration: none;">
+       <a href="/courses" style="text-decoration: none;">
            <div class="box">
               <i class="fas fa-mask fa-4x text-success"></i>
               <h3>cyber secuirty</h3>
            </div>
        </a>
-       <a href="cloud-computing.html" style="text-decoration: none;">
+       <a href="/courses" style="text-decoration: none;">
            <div class="box">
               <i class="fas fa-robot fa-4x text-success"></i>
               <h3>Cloud Computing</h3>
            </div>
        </a>
-       <a href="networking.html" style="text-decoration: none;">
+       <a href="/courses" style="text-decoration: none;">
            <div class="box">
              <i class="fas fa-signal fa-4x text-success"></i>
               <h3>Networking</h3>
            </div>
        </a>
-       <a href="3d-animation.html" style="text-decoration: none;">
+       <a href="/courses" style="text-decoration: none;">
            <div class="box">
              <i class="fas fa-microscope fa-4x text-success"></i>
               <h3>3D animation</h3>
@@ -117,7 +117,7 @@
                   @foreach ($p_courses as $p_course)
                   @if($p_course->course_category === "designmultimedia")
                    <div class="col-lg-4 col-md-6 mb-4 portfolio-item designmultimedia">
-                    <a href="">
+                    <a href="{{route('course.details',['slug'=>$p_course->slug])}}">
                        <div class="box">
                           <div class="image">
                              <img src="{{asset('assets/images/popular_courses')}}/{{$p_course->image}}" alt="">
@@ -155,7 +155,7 @@
                    @foreach ($p_courses as $p_course)
                    @if($p_course->course_category === "websoftware")
                     <div class="col-lg-4 col-md-6 mb-4 portfolio-item websoftware">
-                     <a href="">
+                     <a href="{{route('course.details',['slug'=>$p_course->slug])}}">
                         <div class="box">
                            <div class="image">
                               <img src="{{asset('assets/images/popular_courses')}}/{{$p_course->image}}" alt="">
@@ -193,7 +193,7 @@
                     @foreach ($p_courses as $p_course)
                     @if($p_course->course_category === "degitalmarketing")
                      <div class="col-lg-4 col-md-6 mb-4 portfolio-item degitalmarketing">
-                      <a href="">
+                        <a href="{{route('course.details',['slug'=>$p_course->slug])}}">
                          <div class="box">
                             <div class="image">
                                <img src="{{asset('assets/images/popular_courses')}}/{{$p_course->image}}" alt="">
@@ -232,7 +232,7 @@
                     @foreach ($p_courses as $p_course)
                     @if($p_course->course_category === "Networking")
                      <div class="col-lg-4 col-md-6 mb-4 portfolio-item Networking">
-                      <a href="">
+                        <a href="{{route('course.details',['slug'=>$p_course->slug])}}">
                          <div class="box">
                             <div class="image">
                                <img src="{{asset('assets/images/popular_courses')}}/{{$p_course->image}}" alt="">
@@ -331,7 +331,7 @@
 
       @foreach ($p_courses as $p_course)
       @if($p_course->course_category === "designmultimedia")
-         <a href="">
+      <a href="{{route('course.details',['slug'=>$p_course->slug])}}">
             <div class="box">
                <div class="image">
                   <img src="{{asset('assets/images/popular_courses')}}/{{$p_course->image}}" alt="">
@@ -372,7 +372,7 @@
 
       @foreach ($p_courses as $p_course)
         @if($p_course->course_category === "websoftware")
-         <a href="">
+        <a href="{{route('course.details',['slug'=>$p_course->slug])}}">
             <div class="box">
                <div class="image">
                   <img src="{{asset('assets/images/popular_courses')}}/{{$p_course->image}}" alt="">
@@ -411,7 +411,7 @@
 
          @foreach ($p_courses as $p_course)
          @if($p_course->course_category === "degitalmarketing")
-          <a href="">
+         <a href="{{route('course.details',['slug'=>$p_course->slug])}}">
             <div class="box">
                <div class="image">
                   <img src="{{asset('assets/images/popular_courses')}}/{{$p_course->image}}" alt="">
@@ -449,7 +449,7 @@
       <div class="box-container">
          @foreach ($p_courses as $p_course)
          @if($p_course->course_category === "Networking")
-         <a href="">
+         <a href="{{route('course.details',['slug'=>$p_course->slug])}}">
             <div class="box">
                <div class="image">
                   <img src="{{asset('assets/images/popular_courses')}}/{{$p_course->image}}" alt="">

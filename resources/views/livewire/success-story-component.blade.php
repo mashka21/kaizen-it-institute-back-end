@@ -52,7 +52,7 @@
              @foreach ($p_courses as $p_course)
              @if($p_course->course_category === "designmultimedia")
               <div class="col-lg-4 col-md-6 mb-4 portfolio-item designmultimedia">
-               <a href="">
+               <a href="{{route('course.details',['slug'=>$p_course->slug])}}">
                   <div class="box">
                      <div class="image">
                         <img src="{{asset('assets/images/popular_courses')}}/{{$p_course->image}}" alt="">
@@ -90,7 +90,7 @@
               @foreach ($p_courses as $p_course)
               @if($p_course->course_category === "websoftware")
                <div class="col-lg-4 col-md-6 mb-4 portfolio-item websoftware">
-                <a href="">
+                  <a href="{{route('course.details',['slug'=>$p_course->slug])}}">
                    <div class="box">
                       <div class="image">
                          <img src="{{asset('assets/images/popular_courses')}}/{{$p_course->image}}" alt="">
@@ -128,7 +128,7 @@
                @foreach ($p_courses as $p_course)
                @if($p_course->course_category === "degitalmarketing")
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item degitalmarketing">
-                 <a href="">
+                  <a href="{{route('course.details',['slug'=>$p_course->slug])}}">
                     <div class="box">
                        <div class="image">
                           <img src="{{asset('assets/images/popular_courses')}}/{{$p_course->image}}" alt="">
@@ -167,7 +167,7 @@
                @foreach ($p_courses as $p_course)
                @if($p_course->course_category === "Networking")
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item Networking">
-                 <a href="">
+                  <a href="{{route('course.details',['slug'=>$p_course->slug])}}">
                     <div class="box">
                        <div class="image">
                           <img src="{{asset('assets/images/popular_courses')}}/{{$p_course->image}}" alt="">

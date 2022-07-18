@@ -1,6 +1,6 @@
    <section class="heading-link">
       <h3>about us</h3>
-      <p> <a href="home.html">home</a> / about </p>
+      <p> <a href="/">home</a> / about </p>
    </section>
 
    <!-- about section starts  -->
@@ -214,20 +214,20 @@
          <i class="fas fa-envelope"></i>
          <h3> email : </h3>
          @if ($settings)
-         <p> {{$settings->email}}</p>
-      @else
-         <p>info@kaizenitbd.com</p>
-      @endif
+            <p> {{$settings->email}}</p>
+         @else
+            <p>info@kaizenitbd.com</p>
+         @endif
       </div>
 
       <div class="icons">
          <i class="fas fa-map"></i>
          <h3>address :</h3>
          @if ($settings)
-         <p> {{$settings->address}}</p>
-      @else
-        <p>151/6, 2nd floor, Gazi Tower, Panthapath Dhaka-1205</p>
-      @endif
+          <p> {{$settings->address}}</p>
+         @else
+          <p>151/6, 2nd floor, Gazi Tower, Panthapath Dhaka-1205</p>
+         @endif
       </div>
 
    </div>

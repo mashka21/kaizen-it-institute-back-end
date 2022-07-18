@@ -17,11 +17,15 @@ return new class extends Migration
             $table->id();
             $table->enum('course_category',['designmultimedia','websoftware','degitalmarketing','Networking']);
             $table->string('course_name')->nullable();
+            $table->string('slug')->unique();
             $table->string('t_n_reviews')->nullable();
             $table->string('t_n_students')->nullable();
             $table->string('n_modules')->nullable();
             $table->string('price')->nullable();
             $table->string('hours')->nullable();
+            $table->string('duration')->nullable();
+            $table->string('description')->nullable();
+            $table->string('module')->nullable();
             $table->string('image')->nullable();
             $table->timestamps();
         });

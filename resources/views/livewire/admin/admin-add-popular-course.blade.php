@@ -34,8 +34,19 @@
                     <form wire:submit.prevent="addPopularCourse">
                         <div class="form-group">
                             <label for="course_name" class=" form-control-label">Course Name</label>
-                            <input type="text" id="course_name" class="form-control" wire:model="course_name" placeholder="Course Name">
+                            <input type="text" id="course_name" class="form-control" wire:model="course_name" placeholder="Course Name" wire:keyup="generateSlug">
                             @error('course_name')<span class="text-danger">{{$message}}</span> @enderror
+                        </div>
+                       
+                        <div class="form-group">
+                            <label for="slug" class=" form-control-label">Course Slug</label>
+                            <input type="text" id="slug" class="form-control" wire:model="slug" placeholder="Course Slug">
+                            @error('slug')<span class="text-danger">{{$message}}</span> @enderror
+                        </div>
+                        <div class="form-group">
+                            <label for="description" class=" form-control-label">Course Description</label>
+                            <textarea type="text" id="description" class="form-control" wire:model="description" placeholder="Course Description"></textarea>
+                            @error('description')<span class="text-danger">{{$message}}</span> @enderror
                         </div>
                         <div class="form-group">
                             <label for="n_modules" class=" form-control-label">No. of Course Modules</label>
@@ -46,6 +57,11 @@
                             <label for="hours" class=" form-control-label">Total hours</label>
                             <input id="hours" rows="10" cols="10" class="form-control" wire:model="hours" placeholder="Total Hours of the course">
                             @error('hours')<span class="text-danger">{{$message}}</span> @enderror
+                        </div>
+                        <div class="form-group">
+                            <label for="duration" class=" form-control-label">Total duration</label>
+                            <input id="duration" rows="10" cols="10" class="form-control" wire:model="duration" placeholder="Course Duration Time">
+                            @error('duration')<span class="text-danger">{{$message}}</span> @enderror
                         </div>
                         <div class="form-group">
                             <label for="t_n_students" class=" form-control-label">No. of students</label>
@@ -83,7 +99,7 @@
                             @endif
                             @error('image')<span class="text-danger">{{$message}}</span> @enderror
                         </div>
-        
+
                         <button id="payment-button" type="submit" class="btn btn-lg btn-primary btn-block">
                             <i class="fa fa-plus fa-lg"></i>&nbsp;
                             <span id="payment-button-amount">ADD</span>

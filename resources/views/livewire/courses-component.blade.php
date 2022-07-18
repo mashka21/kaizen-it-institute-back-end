@@ -14,7 +14,7 @@
 
       @foreach ($p_courses as $p_course)
       @if($p_course->course_category === "designmultimedia")
-         <a href="">
+      <a href="{{route('course.details',['slug'=>$p_course->slug])}}">
             <div class="box">
                <div class="image">
                   <img src="{{asset('assets/images/popular_courses')}}/{{$p_course->image}}" alt="">
@@ -56,7 +56,7 @@
 
       @foreach ($p_courses as $p_course)
       @if($p_course->course_category === "websoftware")
-       <a href="">
+      <a href="{{route('course.details',['slug'=>$p_course->slug])}}">
           <div class="box">
              <div class="image">
                 <img src="{{asset('assets/images/popular_courses')}}/{{$p_course->image}}" alt="">
@@ -97,7 +97,7 @@
 
       @foreach ($p_courses as $p_course)
       @if($p_course->course_category === "degitalmarketing")
-       <a href="">
+      <a href="{{route('course.details',['slug'=>$p_course->slug])}}">
          <div class="box">
             <div class="image">
                <img src="{{asset('assets/images/popular_courses')}}/{{$p_course->image}}" alt="">
@@ -141,7 +141,7 @@
 
       @foreach ($p_courses as $p_course)
       @if($p_course->course_category === "Networking")
-       <a href="">
+      <a href="{{route('course.details',['slug'=>$p_course->slug])}}">
          <div class="box">
             <div class="image">
                <img src="{{asset('assets/images/popular_courses')}}/{{$p_course->image}}" alt="">
