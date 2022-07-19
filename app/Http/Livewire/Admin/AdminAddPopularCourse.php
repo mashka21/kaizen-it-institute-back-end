@@ -2,6 +2,8 @@
 
 namespace App\Http\Livewire\Admin;
 
+use App\Models\CourseModel;
+use App\Models\CourseModelValue;
 use Livewire\Component;
 use Illuminate\Support\Str;
 use Livewire\WithFileUploads;
@@ -23,6 +25,23 @@ class AdminAddPopularCourse extends Component
     public $description;
     public $module;
     public $image;
+
+    public $attr;
+    public $inputs = [];
+    public $attribute_arr = [];
+    public $attribute_values;
+
+     // add attribute
+     public function add(){
+        if(!in_array($this->attr,$this->attribute_arr)){
+            array_push($this->inputs,$this->attr);
+            array_push($this->attribute_arr,$this->attr);
+        }
+    }
+    //remove attribute
+    public function remove($attr){
+        unset($this->inputs[$attr]);
+    }
 
     public function generateSlug(){
         $this->slug = Str::slug($this->course_name,'-');
@@ -74,11 +93,25 @@ class AdminAddPopularCourse extends Component
         $this->image->storeAs('popular_courses',$imagename);
         $p_course->image = $imagename;
         $p_course->save();
+
+        if($this->attr){
+            foreach($this->attribute_values as $key => $attribute_value){
+                $values = explode(",",$attribute_value);
+                foreach($values as $value){
+                    $attr_value = new CourseModelValue();
+                    $attr_value->course_module_id = $key;
+                    $attr_value->value = $value;
+                    $attr_value->	course_id = $p_course->id;
+                    $attr_value->save();
+                }
+            }
+        }
+
         session()->flash('message','Popular course have been added to Home page successfully');
     }
     public function render()
     {
-        $courses = PopularCourses::all();
+        $courses = CourseModel::all();
         return view('livewire.admin.admin-add-popular-course',['courses'=>$courses])->layout('layouts.admin');
     }
 }

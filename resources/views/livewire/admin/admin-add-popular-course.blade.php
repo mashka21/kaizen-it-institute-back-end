@@ -100,6 +100,36 @@
                             @error('image')<span class="text-danger">{{$message}}</span> @enderror
                         </div>
 
+
+
+                        <div class="form-group">
+                            <label>Course Modules</label>
+                            <div class="row">
+                              <select name="" id="" class="form-control col-md-8 ml-3" wire:model="attr">
+                                  <option value="0">Select Modules</option>
+                                  @foreach ($courses as $course)
+                                    <option value="{{$course->id}}">{{$course->name}}</option>
+                                  @endforeach
+                              </select>
+                            <div class="col-md-2 mt-2">
+                                <button type="button" class="btn btn-info btn-sm" wire:click.prevent="add">Add</button>
+                            </div>
+                        </div>
+                          </div>
+
+                          @foreach ($inputs as $key => $value)
+                            <div class="form-group">
+                                <label>{{$courses->where('id',$attribute_arr[$key])->first()->name}}</label>
+                                <div class="row">
+                                <input type="text" class="form-control input-md col-md-8 ml-3" placeholder="{{$courses->where('id',$attribute_arr[$key])->first()->name}}" wire:model="attribute_values.{{$value}}">
+                                <div class="col-md-2 mt-2">
+                                    <button type="button" class="btn btn-danger btn-sm" wire:click.prevent="remove({{$key}})">Remove</button>
+                                </div>
+                            </div>
+                            </div>
+                          @endforeach
+
+
                         <button id="payment-button" type="submit" class="btn btn-lg btn-primary btn-block">
                             <i class="fa fa-plus fa-lg"></i>&nbsp;
                             <span id="payment-button-amount">ADD</span>
