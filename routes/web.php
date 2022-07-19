@@ -39,6 +39,7 @@ use App\Http\Livewire\CourseDetailsComponent;
 use App\Http\Livewire\CoursesComponent;
 use App\Http\Livewire\FreelancingComponent;
 use App\Http\Livewire\HomeComponent;
+use App\Http\Livewire\OurTeamComponent;
 use App\Http\Livewire\SoftwareServicesComponent;
 use App\Http\Livewire\SuccessStoryComponent;
 use Illuminate\Support\Facades\Route;
@@ -77,6 +78,7 @@ Route::get('/contact',ContactComponent::class);
 Route::get('/courses',CoursesComponent::class);
 Route::get('/course/{slug}',CourseDetailsComponent::class)->name('course.details');
 Route::get('/make-admission-course',AdmissionFormComponent::class);
+Route::get('/our-team',OurTeamComponent::class);
 
 
 Route::middleware(['auth:sanctum','verified','authadmin'])->group(function(){
