@@ -54,7 +54,7 @@
       <a href="about" class="{{ request()->is('*about*') ? 'active' : '' }}">about us</a>
       <a href="software-services" class="{{ request()->is('*software-services*') ? 'active' : '' }}">software service</a>
       <a href="freelancing" class="{{ request()->is('*freelancing*') ? 'active' : '' }}">Freelancing</a>
-      <a href="freelancing" >Our Team</a>
+      <a href="our-team" >Our Team</a>
       <a href="success-story" class="{{ request()->is('*success-story*') ? 'active' : '' }}">success story</a>
       <a href="contact"  class="{{ request()->is('*contact*') ? 'active' : '' }}">contact</a>
       <a href="courses" class="btn btn-success courses-btn {{ request()->is('*courses*') ? 'active' : '' }}"><i class="fas fa-book"></i> courses <i class="fas fa-chevron-down"></i></a>
