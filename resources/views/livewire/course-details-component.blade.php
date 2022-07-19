@@ -19,11 +19,24 @@
                         <div class="col-md-12">
                             <h1 class="mt-3 text-success" style="font-weight: bold;">COURSE MODULE</h1>
                             <ul class="list-group mt-3" style="font-size: 18px;">
-                                <li class="list-group-item"><span class="fas fa-check-double text-dark p-1 mr-1"></span> Cras justo odio</li>
-                                <li class="list-group-item"><span class="fas fa-check-double text-dark p-1 mr-1"></span> Dapibus ac facilisis in</li>
-                                <li class="list-group-item"><span class="fas fa-check-double text-dark p-1 mr-1"></span> Morbi leo risus</li>
-                                <li class="list-group-item"><span class="fas fa-check-double text-dark p-1 mr-1"></span> Porta ac consectetur ac</li>
-                                <li class="list-group-item"><span class="fas fa-check-double text-dark p-1 mr-1"></span> Vestibulum at eros</li>
+
+                                {{-- 
+                                <tr>
+                                    <th>{{$av->CourseModel->name}} : </th>
+                                    
+                                        <td><p>{{$pav->value}}</p></td>
+                                    
+                                </tr>
+                            --}}
+                            @if ($this_course)
+                                
+                            
+                              @foreach ($this_course->Coursemodelvalues->where('course_id',$this_course->id) as $pav)
+                                <li class="list-group-item">                                  
+                                    <span class="fas fa-check-double text-dark p-1 mr-1"></span> {{$pav->value}}
+                                </li>
+                                @endforeach
+                                @endif
                               </ul>
                         </div>
                         <div class="col-md-6 mt-5">

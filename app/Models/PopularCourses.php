@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\CourseModelValue;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class PopularCourses extends Model
 {
@@ -13,4 +14,8 @@ class PopularCourses extends Model
     protected $fillable = [
         'module',
     ];
+
+    public function coursemodelvalues(){
+        return $this->hasMany(CourseModelValue::class,'course_id');
+    }
 }

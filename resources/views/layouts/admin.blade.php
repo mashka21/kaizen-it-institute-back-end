@@ -137,6 +137,9 @@
                     <li>
                         <a href="{{route('admin.managecontacts')}}"> <i class="menu-icon fa fa-users"></i>Contacts </a>
                     </li>
+                    <li>
+                        <a href="{{route('admin.add-course-model')}}"> <i class="menu-icon fa fa-users"></i>Course Models </a>
+                    </li>
 
                 </ul>
             </div>

@@ -2,6 +2,7 @@
 
 use App\Http\Livewire\AboutComponent;
 use App\Http\Livewire\Admin\AdminAddCommentsHomePage;
+use App\Http\Livewire\Admin\AdminAddCourseModels;
 use App\Http\Livewire\Admin\AdminAddFreeSeminar;
 use App\Http\Livewire\Admin\AdminAddHomeSlider;
 use App\Http\Livewire\Admin\AdminAddPartners;
@@ -144,6 +145,9 @@ Route::middleware(['auth:sanctum','verified','authadmin'])->group(function(){
     Route::get('/admin/admin-manage-partners',AdminManagePartners::class)->name('admin.managepartners');
     Route::get('/admin/admin-add-partner',AdminAddPartners::class)->name('admin.addPartners');
     Route::get('/admin/admin-edit-partner/{partner_id}',AdminEditPartner::class)->name('admin.editPartner');
+
+    // Course Models 
+    Route::get('/admin/admin-add-course-models',AdminAddCourseModels::class)->name('admin.add-course-model');
 });
 
 
