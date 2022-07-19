@@ -9,6 +9,7 @@ use App\Http\Livewire\Admin\AdminAddPartners;
 use App\Http\Livewire\Admin\AdminAddPopularCourse;
 use App\Http\Livewire\Admin\AdminAddSoftwareServices;
 use App\Http\Livewire\Admin\AdminAddSuccessStory;
+use App\Http\Livewire\Admin\AdminAddTeamMember;
 use App\Http\Livewire\Admin\AdminDashboard;
 use App\Http\Livewire\Admin\AdminDeleteCommentsHomePage;
 use App\Http\Livewire\Admin\AdminDeleteFreeSeminar;
@@ -22,6 +23,7 @@ use App\Http\Livewire\Admin\AdminEditPartner;
 use App\Http\Livewire\Admin\AdminEditPopularCourses;
 use App\Http\Livewire\Admin\AdminEditSoftwareServices;
 use App\Http\Livewire\Admin\AdminEditSuccessStory;
+use App\Http\Livewire\Admin\AdminEditTeamMember;
 use App\Http\Livewire\Admin\AdminEditUsers;
 use App\Http\Livewire\Admin\AdminManageContacts;
 use App\Http\Livewire\Admin\AdminManagePartners;
@@ -30,6 +32,7 @@ use App\Http\Livewire\Admin\AdminMangeFreeSeminars;
 use App\Http\Livewire\Admin\AdminMangeSoftwareServices;
 use App\Http\Livewire\Admin\AdminSettings;
 use App\Http\Livewire\Admin\AdminShowUsers;
+use App\Http\Livewire\Admin\AdminTeamMembers;
 use App\Http\Livewire\Admin\EditComment;
 use App\Http\Livewire\Admin\EditHomeSliderForm;
 use App\Http\Livewire\Admin\EditPopularCourseForm;
@@ -40,6 +43,7 @@ use App\Http\Livewire\CourseDetailsComponent;
 use App\Http\Livewire\CoursesComponent;
 use App\Http\Livewire\FreelancingComponent;
 use App\Http\Livewire\HomeComponent;
+use App\Http\Livewire\OurTeamComponent;
 use App\Http\Livewire\SoftwareServicesComponent;
 use App\Http\Livewire\SuccessStoryComponent;
 use Illuminate\Support\Facades\Route;
@@ -78,6 +82,7 @@ Route::get('/contact',ContactComponent::class);
 Route::get('/courses',CoursesComponent::class);
 Route::get('/course/{slug}',CourseDetailsComponent::class)->name('course.details');
 Route::get('/make-admission-course',AdmissionFormComponent::class);
+Route::get('/our-team',OurTeamComponent::class);
 
 
 Route::middleware(['auth:sanctum','verified','authadmin'])->group(function(){
@@ -88,7 +93,12 @@ Route::middleware(['auth:sanctum','verified','authadmin'])->group(function(){
     Route::get('/admin/admin-show-all-users',AdminShowUsers::class)->name('admin.showusers');    
     Route::get('/admin/admin-edit-users',AdminEditUsers::class)->name('admin.editusers');    
     Route::get('/admin/admin-delete-users',AdminDeleteUsers::class)->name('admin.deleteusers');    
-    Route::get('/admin/admin-edit-user/{user_id}',EditUser::class)->name('admin.edituser');    
+    Route::get('/admin/admin-edit-user/{user_id}',EditUser::class)->name('admin.edituser');
+    
+    //Manage Team Members
+    Route::get('/admin/team-members',AdminTeamMembers::class)->name('admin.teamMembers');
+    Route::get('/admin/add-team-members',AdminAddTeamMember::class)->name('admin.addMember');
+    Route::get('/admin/edit-team-members/{id}',AdminEditTeamMember::class)->name('admin.editMember');
 
     //Admin manage home slider
     Route::get('/admin/admin-add-home-slider',AdminAddHomeSlider::class)->name('admin.addhomeslider');
