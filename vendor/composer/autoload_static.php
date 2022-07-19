@@ -627,6 +627,7 @@ class ComposerStaticInitfb853a38945f1b7803a5c545cb2510f7
         'App\\Models\\Admission' => __DIR__ . '/../..' . '/app/Models/Admission.php',
         'App\\Models\\Comment' => __DIR__ . '/../..' . '/app/Models/Comment.php',
         'App\\Models\\Contact' => __DIR__ . '/../..' . '/app/Models/Contact.php',
+        'App\\Models\\CourseModel' => __DIR__ . '/../..' . '/app/Models/CourseModel.php',
         'App\\Models\\FreeSeminar' => __DIR__ . '/../..' . '/app/Models/FreeSeminar.php',
         'App\\Models\\HomeSlider' => __DIR__ . '/../..' . '/app/Models/HomeSlider.php',
         'App\\Models\\Partner' => __DIR__ . '/../..' . '/app/Models/Partner.php',
