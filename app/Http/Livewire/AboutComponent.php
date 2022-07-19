@@ -6,6 +6,7 @@ use App\Models\Partner;
 use App\Models\Setting;
 use Livewire\Component;
 
+// hello
 class AboutComponent extends Component
 {
     public function render()
