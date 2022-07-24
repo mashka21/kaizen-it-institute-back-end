@@ -33,6 +33,7 @@ use App\Http\Livewire\Admin\AdminMangeSoftwareServices;
 use App\Http\Livewire\Admin\AdminSettings;
 use App\Http\Livewire\Admin\AdminShowUsers;
 use App\Http\Livewire\Admin\AdminTeamMembers;
+use App\Http\Livewire\Admin\AdminWhoJoinedSeminar;
 use App\Http\Livewire\Admin\EditComment;
 use App\Http\Livewire\Admin\EditHomeSliderForm;
 use App\Http\Livewire\Admin\EditPopularCourseForm;
@@ -43,6 +44,7 @@ use App\Http\Livewire\CourseDetailsComponent;
 use App\Http\Livewire\CoursesComponent;
 use App\Http\Livewire\FreelancingComponent;
 use App\Http\Livewire\HomeComponent;
+use App\Http\Livewire\JoinFreeSeminar;
 use App\Http\Livewire\OurTeamComponent;
 use App\Http\Livewire\SoftwareServicesComponent;
 use App\Http\Livewire\SuccessStoryComponent;
@@ -83,6 +85,8 @@ Route::get('/courses',CoursesComponent::class);
 Route::get('/course/{slug}',CourseDetailsComponent::class)->name('course.details');
 Route::get('/make-admission-course',AdmissionFormComponent::class);
 Route::get('/our-team',OurTeamComponent::class);
+Route::get('/join-free-seminar',JoinFreeSeminar::class);
+
 
 
 Route::middleware(['auth:sanctum','verified','authadmin'])->group(function(){
@@ -123,6 +127,8 @@ Route::middleware(['auth:sanctum','verified','authadmin'])->group(function(){
     Route::get('/admin/admin-mange-freeseminars',AdminMangeFreeSeminars::class)->name('admin.managefreeseminars');
     Route::get('/admin/admin-add-free-seminar',AdminAddFreeSeminar::class)->name('admin.addfreeseminar');
     Route::get('/admin/admin-edit-free-seminar/{freeseminar_id}',AdminEditFreeSeminars::class)->name('admin.editfreeseminar');
+    Route::get('/admin/who-joined',AdminWhoJoinedSeminar::class)->name('admin.whoJoined');
+
 
     //Success Stories 
     Route::get('/admin/admin-manage-success-stories',AdminManageSuccessStories::class)->name('admin.managesuccessstory');

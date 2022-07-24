@@ -100,6 +100,7 @@
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-table text-success"></i><a href="{{route('admin.managefreeseminars')}}">Manage Free Seminars</a></li>
                             <li><i class="fa fa-plus text-primary"></i><a href="{{route('admin.addfreeseminar')}}">Add Free Seminar</a></li>
+                            <li><i class="fa fa-table text-success"></i><a href="{{route('admin.whoJoined')}}">Check Who joined our seminar</a></li>
                         </ul>
                     </li>
 

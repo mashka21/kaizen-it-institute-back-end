@@ -8,7 +8,7 @@
        <h1 class="display-3 mb-3" style="font-weight: bold;">Admission to all courses is ongoing</h1>
        <p class="mb-5">It is not too late to make a career decision. Get enrolled in any course online or offline at your convenience now.</p>
        <div class="text-center ml-5 mb-5">
-          <button class="btn btn-success float-left ml-5">Join Free Seminar</button>
+          <button class="btn btn-success float-left ml-5"><a href="/join-free-seminar" style="color: inherit;">Join Free Seminar</a></button>
           <button class="btn btn-success">Browse Courses</button>
        </div>
     </div>
